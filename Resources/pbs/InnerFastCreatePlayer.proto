@@ -1,0 +1,10 @@
+import "FastCreatePlayer.proto";
+
+package DianShiTech.Protocal;
+
+message InnerFastCreatePlayer {
+  enum traits { value = 16;}
+  required int64 session = 1;
+  required FastCreatePlayer action = 2;
+  optional string server_name = 3;
+}

@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message InteractAddMinesPosC2S{
+  enum traits{value=5069;}
+}

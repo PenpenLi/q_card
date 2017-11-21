@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+message PVPArenaStateS2C{
+	enum traits{value = 5137;}
+	enum ArenaState{
+		ARENA_OPEN = 1;
+		ARENA_CLOSE = 2;
+	}
+	required ArenaState state = 1;
+}

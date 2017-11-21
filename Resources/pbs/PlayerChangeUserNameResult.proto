@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+message PlayerChangeUserNameResult {
+  enum traits { value = 4457;}
+  enum State {
+    Ok = 0;
+    HasSameUserName = 1;
+    NotValidName = 2;
+    HasBindUserName = 3;
+    ThirdChannelNotAllow = 4;
+  }
+  required State state = 1;
+  optional bytes name = 2;
+}

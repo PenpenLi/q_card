@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message SellCardToSystem {
+  enum traits { value = 3541;}
+  repeated int32 card_id = 1;
+}

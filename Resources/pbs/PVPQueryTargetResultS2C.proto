@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+import "PlayerPVPBaseInfo.proto";
+import "ClientSync.proto";
+message PVPQueryTargetResultS2C{
+  enum traits{
+    value = 5023;
+  }
+
+  enum TargetResult{
+    TR_NO_ERROR = 1;          //找到了对手
+    TR_NEED_MORE_TOKEN = 2;   //需要更多的令牌
+    TR_LEVEL_NOT_ALLOW = 3;   //等级还没到达开启条件
+    TR_SYSTEM_ERROR = 4;      //系统错误.例如找不到对手等等
+  }
+
+  required TargetResult result = 1;
+  optional PVPTarget    target = 2;
+  optional ClientSync   client = 3;
+  
+}

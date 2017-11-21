@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message TalentDataQueryResultS2C{
+	enum traits{value = 5124;}
+	optional ClientSync client = 1;  
+	repeated int32 talent_up = 2;
+}

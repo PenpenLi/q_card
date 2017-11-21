@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message EquipTurnback {
+  enum traits { value = 10045;}
+  required int32 equip_id = 1;
+}
+

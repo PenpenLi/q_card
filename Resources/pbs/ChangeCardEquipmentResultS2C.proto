@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message ChangeCardEquipmentResultS2C {
+  enum traits { value = 5100;}
+  enum ErrorCode{
+    NO_ERROR_CODE = 1;
+    NOT_FOUND_EQUIPMENT = 2;
+    NOT_FOUND_CARD = 3;
+    CARD_NOT_HAVE_EQUIPMENT = 5;
+    CARD_IS_DRESS_EQUIPMENT = 6;
+    SYSTEM_ERROR = 4;
+  }
+  required ErrorCode error = 1;
+  optional ClientSync client_sync = 2;
+}

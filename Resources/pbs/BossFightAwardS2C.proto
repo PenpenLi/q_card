@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "BossFightBase.proto";
+message BossFightAwardS2C{
+  enum traits {value = 5050;}
+  required BossAward  award = 1;
+}

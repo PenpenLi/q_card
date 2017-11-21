@@ -1,0 +1,12 @@
+import "SingleTask.proto";
+package DianShiTech.Protocal;
+message TaskState {
+  enum traits { value = 3754;}
+  optional SingleTask main_task = 1;
+  repeated SingleTask side_task = 2;
+  repeated SingleTask daily_task = 4;
+  optional bool is_finished_all_main_task = 3;
+  optional int32 finished_main_task_count = 5;
+  optional int32 finished_side_task_count = 6;
+  optional int32 finished_daily_task_count = 7;
+}

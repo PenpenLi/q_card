@@ -1,0 +1,112 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+//import "PlayerBaseInformation.proto";
+
+ // 等级段奖励领取记录
+message PVPAward{
+  required int32 rank  = 1;  //等级段
+  required bool  chance   = 2;  //是否有领取资格
+}
+//PVP基础信息
+message PVPBaseData{
+  required int32 player       = 1;  // id
+  optional int32 source       = 2;  // 积分
+  optional int32 attackSource = 3;  // 攻击取胜次数
+  optional int32 defendSource = 4;  // 防守取胜次数
+  optional int32 maxSource    = 5;  // 最大积分
+  optional int32 rank         = 6;  // 排名段
+  optional int32 keepWin      = 7;  // 连胜记录
+  optional int32 maxKeepWin   = 8;  // 最高连胜记录
+  optional int32 headId       = 9; // 头像
+  optional int32 exp          = 10; // 等级
+  optional string name        = 11; // 玩家名字
+  optional int32 protectTime  = 12; //免战时间
+  optional int32 dayScore	  = 13; //当天积分
+  optional int32 award_time   = 14; //上次领取每日奖励时间
+}
+enum PVPEnum{
+  ATTACK_WIN = 1;                 //进攻方获胜
+  DEFEND_WIN = 2;                 //防守方获胜
+  MAX_ENEMY_COUNT = 25;           //最大的仇人的数量
+  MAX_REPORT_COUNT = 50;          //最大战报数量
+  MAX_HERO_RANK_COUNT = 20;      //最强王者榜数量
+  MAX_POPULARITY_RANK_COUNT = 10; //风云榜
+  MAX_KEEP_WIN_RANK_COUNT = 15;   //连胜榜
+  MAX_SEARCH_TARGET = 8;		  //最大的不重复人数
+ 
+ }
+ enum NewBirdEnum{
+  NEWBIRD_PVP_PROTECT_LEVEL = 36; //新手等级保护
+  MAX_NEW_BIRD_ROBOT_STEP_COUNT = 10; //新手机器人个数
+ }
+
+//战报结果
+message ReportResult{
+  required int32        source_attack  = 1;  //积分
+  required int32        source_defend  = 3;
+  required int32        result  = 2;  //战斗结果
+  optional int32        coin = 4; // 
+  optional int32        miner_coin = 5;//矿产
+  optional int32        talent_point = 6; //天赋点
+}
+
+// 服务器内部PVP战报结构
+message PVPServerReport{
+  optional int32 id             = 1;  // id
+  required int32 attacker       = 2;  // 进攻方
+  required int32 defender       = 3;  // 防守方
+  required uint32 time           = 4;  // 时间
+  optional ReportResult result  = 5;  // 战斗结果
+  optional int32 review_id      = 6;  //录像ID
+}
+//服务器的玩家PVP数据
+message PVPServerData{
+  required PVPBaseData  base            = 1;  //玩家基础数据
+  optional uint32       defendTime      = 2;  //上次被攻击时间
+  optional uint32       checkTime       = 3;  //被分配到对手时间
+  optional int32        keepAward       = 4;  //可以领取的连胜记录
+  repeated int32        reports         = 5;  //战报列表 id 可以查询具体数据
+  repeated int32        enemys          = 6;  //仇人列表 id 可以查询具体数据
+  repeated PVPAward     awards          = 7;  //领取奖励记录
+  repeated FightCardPosition  cards     = 8;  //上次战斗保存的阵型列表
+  optional int32        target          = 9;  //目标玩家ID
+  optional int32        flag            = 10; //更新标示
+  optional int32        robotbase       = 11; //机器人拷贝的玩家ID
+  optional int32        protect_step	= 12; //新手保护步骤
+  repeated int32        search_list		= 13; //搜索记录
+}
+
+//
+//下发的战报数据结构
+message PVPReport{
+  required PVPBaseData  attacker      = 1;  //攻击方
+  required PVPBaseData  defender      = 2;  //防守方
+  required ReportResult result        = 3;  //结果
+  required int32        fightTime     = 4;  //战斗时间
+  optional int32 		review_id     = 5;  //录像ID
+  optional int32 		report_id 	  = 6;	//
+}
+//下发的对手PVP数据
+message PVPTarget{
+  optional PVPBaseData base   = 1;
+  optional FightCards cards  = 2;
+  optional int32 source = 3; //可以获取的积分
+  optional int32 coin = 4; //可以获取的铜钱
+  optional int32 minecoin = 5; //可以获取的矿场价格
+  optional int32 talent_point = 6; //可以获得的天赋点
+}
+//下发的玩家PVP数据
+message PVPData{
+  required PVPBaseData      base    = 1;  //基础数据
+  repeated PVPBaseData      enemys  = 2;  //仇人数据
+  repeated PVPReport        reports = 3;  //战报数据
+  repeated PVPAward         awards  = 4;  //领取奖励数据
+  optional PVPTarget        target  = 5;  //目标信息
+  optional int32          keepAward = 6;  //连胜奖励
+  optional int32 			season  = 7;  //赛季结束时间
+}
+//message PVPFightTarget{
+//  required PlayerBaseInformation base = 1;
+//  required PVPTarget target = 2;
+//  optional int32 target_type = 3; // 目标类型 0 搜索  1 挑战连胜 2 复仇
+//}

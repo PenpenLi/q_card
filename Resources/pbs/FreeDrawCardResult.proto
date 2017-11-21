@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message FreeDrawCardResult {
+  enum traits {
+    value = 2777;
+  }
+  enum State {
+    Ok = 0;
+    NoRightForToday = 1;
+    NeedMoreCardBagCell = 2;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+  repeated int32 cards = 3;
+}

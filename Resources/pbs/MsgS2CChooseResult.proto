@@ -1,0 +1,16 @@
+import "PlayerFriends.proto";
+package DianShiTech.Protocal;
+message MsgS2CChooseResult{
+  enum trauts{
+    value = 5091;
+  }
+  enum ErrorCode{
+    NO_ERROR_CODE = 1;
+    FRIEND_LIST_FULL = 2;
+    TARGET_LIST_FULL = 3;
+    NOT_FOUND_INVITE = 4;
+    SYSTEM_ERROR = 5;
+  }
+  
+  required ErrorCode error = 1;
+}

@@ -1,0 +1,11 @@
+class UserLogin
+{
+	static void login(const std::string &user,const std::string &password);
+	static void registe(const std::string &user,const std::string &password);
+	static void registerScriptHandler(LUA_FUNCTION nHandler);
+	static void getUser(const std::string &token);
+	static const std::string getChannel();
+	static void fastCreateUser();
+	static void bindAccount(const std::string &oldUser,const std::string &oldPassword,const std::string &user,const std::string &password);
+        static void gameExit();
+};

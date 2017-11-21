@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqGetLikeAwardResult{
+  enum traits{ value = 10072;}
+  enum Result{
+    TodayAlreadyGetAward = 1;	//今天已经领过该奖励了
+	NotFistRank = 2;			//不是第一名不能获取该奖励
+	ConfigError = 3;			//配置错误
+	Success = 4;
+  }
+
+  required Result result = 1;
+  optional ClientSync client_sync = 2;
+  optional int32 like = 3;
+}

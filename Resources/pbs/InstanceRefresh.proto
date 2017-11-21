@@ -1,0 +1,10 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message InstanceRefresh{
+  enum traits{
+    value = 5018 ;
+  }
+
+  required ClientSync client = 1;
+
+}

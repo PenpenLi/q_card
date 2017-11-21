@@ -1,0 +1,9 @@
+
+
+class ScrollNumberl:public CCNode
+{
+    static ScrollNumberl *createScrollLabel( char *fontName, float fontSize, ccColor3B& color3, int maxCols = 8);
+    static ScrollNumberl *createScrollImg(char *fileName, int maxCols = 8);
+    void setNumber(int number);
+	void setNumberExt(int number, const char *strSuffix);
+};

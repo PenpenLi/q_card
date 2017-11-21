@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message EquipmentCombineToEquipment {
+  enum traits { value = 4501;}
+  required int32 config_id = 1; // table equipment combine
+  repeated int32 equipment_id = 2; // equipment id in bag
+}

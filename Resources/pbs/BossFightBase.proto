@@ -1,0 +1,49 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+import "ClientSync.proto";
+
+// boss 战玩家数据
+message BossPlayerData{
+  required int32  id = 1;       //
+  required string name = 2;
+  required int32  damage = 3;
+  required int32  cd     = 4;
+  required string server = 5;
+  optional int32  relive = 6;
+}
+// boss 结算数据
+message BossAward{
+  required int32      boss = 5;
+  optional ClientSync client = 2;
+  required int32      rank = 3;   //排名名次
+  required bool       killer = 4; //是否击杀
+}
+//排行数据
+message BossRankData{
+  repeated BossPlayerData rank = 1;
+}
+//特殊伤害卡牌
+message BossSpecialCard{
+  required int32 card = 1;
+  required int32 per  = 2;
+}
+// boss 战数据
+message BossFightInfo{
+  required BossPlayerData   self = 1;
+  required BossRankData     rank = 3;
+  required int32            boss = 4;
+  required int32            hpper= 5;
+  repeated BossSpecialCard  card = 2;
+}
+message BossDamageData{
+  required int32 boss = 1;
+  required int32 damage = 2;
+  required int32 hp = 3;
+}
+message BossInitData{
+  required int32 boss = 1;
+  required int32 level = 2;
+}
+message BossInit{
+  repeated BossInitData data = 1;
+}

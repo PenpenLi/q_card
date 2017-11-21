@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message ReqUseQuickMoney{
+	enum traits {value = 10104;}
+}

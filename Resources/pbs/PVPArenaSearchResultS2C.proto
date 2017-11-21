@@ -1,0 +1,18 @@
+package DianShiTech.Protocal;
+import "PVPArenaBase.proto";
+message PVPArenaSearchResultS2C{
+	enum traits{value = 5130;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;	//
+		NOT_OPEN_TIME = 2;	//时间没到
+		LEVEL_LIMIT   = 3;  //等级不够
+		LIMIT_SEARCH  = 5;	//搜索次数没了
+		NOT_IN_SEARCH = 6;	//不在搜索
+		WAIT_RESULT   = 7;	//等待战斗结算结果
+		SYSTEM_ERROR  = 4;  //其他错误
+	}
+	required ErrorCode error = 1;		
+	optional PVPArenaTarget target = 2;  //对手数据
+	optional PVPArenaData self = 3;		 //自己数据
+	optional bool cancel = 4;
+}

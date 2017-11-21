@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message AskForVipRebate {
+  enum traits {
+    value = 3747;
+  }
+}

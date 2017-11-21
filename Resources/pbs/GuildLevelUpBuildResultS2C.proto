@@ -1,0 +1,16 @@
+package DianShiTech.Protocal;
+import "GuildSync.proto";
+message GuildLevelUpBuildResultS2C{
+	enum traits{value = 5189;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_FOUND_GUILD = 2;	//没有公会
+		AUTHORITY_LIMIT = 3;	//权限不够
+		NOT_FOUND_BUILD = 4;	//没有这个建筑
+		NEED_MORE_RESOURCE = 5;	//资源不够
+		HAS_BUILD_UP = 6;		//有建筑升级
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+}

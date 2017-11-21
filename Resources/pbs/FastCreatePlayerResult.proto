@@ -1,0 +1,22 @@
+package DianShiTech.Protocal;
+message FastCreatePlayerResult {
+  enum traits {
+    value = 1015;
+  }
+  enum Result {
+    Ok = 0;
+    JustCreating = 1; // player has created. waiting for creating result
+    NotValidName = 2;
+    HasSameNameWithOthers = 3;
+    HasLogined = 4;
+    PassworNotValid = 5;
+    EmptyNameIsNotValid = 6;
+    ServerPlayerFull = 7;
+    ERROR_SIGN_CODE = 8;
+    ERROR_CLIENT_VERSION = 9;
+  }
+  required Result result = 1;
+  optional int32 id = 2;
+  optional bytes password = 3;
+  optional bytes name = 4;
+}

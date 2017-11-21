@@ -1,0 +1,7 @@
+package DianShiTech.GameLogic;
+message DataCellIsReady {
+  enum traits {
+    value = 50;
+  }
+  optional int32 count = 1;
+}

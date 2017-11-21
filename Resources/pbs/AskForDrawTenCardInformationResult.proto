@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message AskForDrawTenCardInformationResult {
+  enum traits { value = 3268;}
+  required int32 key = 1;
+  message DrawCard {
+    required bytes nick_name = 1; // who draw the card
+    required int32 draw_action_time = 2;
+    required int32 card_config_id = 3;
+  }
+  repeated DrawCard card = 2;
+}

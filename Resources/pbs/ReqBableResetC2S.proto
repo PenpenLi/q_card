@@ -1,0 +1,5 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqBableResetC2S{
+	enum traits {value = 10090;}
+}

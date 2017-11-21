@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message SmeltEquip {
+  enum traits { value = 10040;}
+  repeated int32 equip_id = 1;
+}

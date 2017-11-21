@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "StoreItem.proto";
+message PlayerBuyFormStoreC2S{
+	enum traits {value = 5149;}
+	optional int32 type = 1;  //商店类型
+	optional int32 store_item = 2;				   //购买的商品
+	optional int32 count = 3;
+}

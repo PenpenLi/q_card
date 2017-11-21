@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message ActivityMissionInfos{
+enum traits{ value = 10063;}
+  message ActivityMission{
+	optional int32 id = 1;
+	optional int32 var = 3;							//进度
+	optional int32 award_is_get = 4;				//奖励是否已经领取
+  }
+  repeated ActivityMission   active_missions = 1;
+  repeated int32 odds_award_is_get = 2; 
+}

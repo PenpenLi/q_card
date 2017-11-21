@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+
+message CardDropItemEvent {
+  enum traits { value = 8107;}
+  required int32 drop_item_id = 1;
+  required int32 drop_item_pos = 2;
+}

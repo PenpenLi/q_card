@@ -1,0 +1,17 @@
+package DianShiTech.Protocal;
+message FastCreatePlayer {
+  enum traits {
+    value = 1014;
+  }
+  optional bytes name = 1;
+  optional bytes password = 2;
+  
+  //第三方登录的时候填写渠道相关信息
+  //会做额外的信息验证
+  optional string channel = 4;
+  optional string sign = 5;
+  optional string version = 6;
+  
+  //下载渠道
+  optional string down_channel = 7;
+}

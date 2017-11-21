@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message PlayerChangeUserName {
+  enum traits { value = 4451;}
+  required bytes name = 1;
+}

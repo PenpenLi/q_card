@@ -1,0 +1,23 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message TalentLevelUpResultS2C{
+	enum traits{value = 5114;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;			//成功
+		NEED_MORE_COIN = 2;			//需要更多铜币
+		NEED_MORE_POINT = 3;		//需要更多天赋点
+		NEED_CONDITION_TALENT = 5; 	//前置天赋没有完成
+		PLAYER_LEVEL_LIMIT = 6;		//玩家等级不够
+		OTHER_TALENT_LEVEL_UP = 7;  //其他天赋正在升级
+		SYSTEM_ERROR = 8;			//其他错误
+		NEED_USED_MORE_POINT= 9;	//需要使用更多天赋点
+		NOT_FOUND_TALENT = 10;		//没有这个天赋
+		TALENT_IS_LEARED = 11;		//天赋已经学习过
+		TALENT_ID_NOT_LEARN = 12;	//发送的ID没有学习
+		NEED_MORE_MONEY = 13;		//需要更多的元宝
+	}
+	
+	required ErrorCode error = 1;
+	optional ClientSync client = 2;
+	optional int32 talent = 3; 
+}

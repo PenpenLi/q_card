@@ -1,0 +1,14 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ItemCombineToItemResult {
+  enum traits { value = 2356;}
+  enum State {
+    Ok = 0;
+    NotEnoughLeaderPower = 1;
+    NotEnoughCurrency = 2;
+    NeedMoreBagCell = 3;
+    NotEnoughItems = 4;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message SyncTime {
+  enum traits { value = 1056;}
+  // this message need by client and server (send and receive)
+  optional int32 send_message_time = 1; // client send message's time time()
+  optional int32 receive_message_time = 2; // server time when handle message time
+  // in some very BUSY condition this is not very accurate
+  
+  optional string time_zone = 3; // time zone.
+}

@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "ReportReview.proto";
+message PVPQueryReportReviewResult{
+  enum traits{
+    value = 10054;
+  }
+
+  enum ErrorCode{
+   NO_ERROR_CODE = 1;
+   NOT_FOUND_REVIEW = 2 ;
+   SYSTEM_ERROR = 3;
+  }
+  required ErrorCode error = 1;
+  optional ReportReview view = 2;
+}

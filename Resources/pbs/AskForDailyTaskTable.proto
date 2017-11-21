@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message AskForDailyTaskTable {
+  enum traits { value = 3465;}
+}

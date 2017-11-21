@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import "InteractPlayerBase.proto";
+message InteractAddMinesPosResultS2C{
+  enum traits {value = 5070;}
+  enum ErrorCode {
+    NO_ERROR_CODE = 1;
+    THE_POS_FULL = 2;
+    NEED_MOER_MONEY = 3;
+    SYSTEM_ERROR = 4;
+  }
+  required ErrorCode error = 1;
+  optional InteractDataUpdate update  = 2;
+}

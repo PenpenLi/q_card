@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import"GuildBase.proto";
+message GuildListS2C{
+	enum traits{value = 5200;}
+	repeated GuildBase dismiss = 1;  	//解散列表
+	repeated GuildBase new_guild = 2;	//新建列表
+}

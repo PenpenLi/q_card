@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message TalentClearCDC2S{
+	enum traits{value = 5115;}
+	enum CDType{ 
+		TALENT_BANK = 1; 	//清除银行CD
+		TALENT_SKILL = 2;	//清除技能CD
+	}
+	
+	required CDType type = 1;	// type == TALENT_BANK时候talent可以不填
+	optional int32 talent = 2;	// 需要清除升级的天赋ID
+}

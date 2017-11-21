@@ -1,0 +1,12 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message AskForLevelRewardResult {
+  enum traits { value = 3558;}
+  enum State {
+    Ok = 0;
+    FailedForLevel = 1;
+    BagNeedCleanUp = 2;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

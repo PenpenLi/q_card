@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message RemoveEquipmentFromCard {
+  enum traits { value = 2361;}
+  required int32 equipment_id = 1;
+}

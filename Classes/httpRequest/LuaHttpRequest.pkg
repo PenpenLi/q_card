@@ -1,0 +1,6 @@
+class CCLuaHttpRequest: CCHttpRequest
+{
+	void setResponseScriptCallback(LUA_FUNCTION aHandler);
+	static CCLuaHttpRequest* create();
+	static bool mkdirs(std::string aDir);
+};

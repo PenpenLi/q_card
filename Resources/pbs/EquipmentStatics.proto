@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message EquipmentStatics {
+  enum traits { value = 2154;}
+  repeated int32 armor_config_id = 1;
+  repeated int32 weapon_config_id = 2;
+  repeated int32 adornment_config_id = 3;
+}

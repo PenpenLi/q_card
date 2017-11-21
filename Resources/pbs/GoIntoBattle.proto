@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+
+message GoIntoBattle {
+  enum traits { value = 1069;}
+  required int32 backup_card_id = 1;
+  required int32 position_in_active_group = 2; // server never used this. so no
+  // check for this
+}

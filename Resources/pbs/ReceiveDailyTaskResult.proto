@@ -1,0 +1,16 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReceiveDailyTaskResult {
+  enum traits { value = 3772;}
+  enum State {
+    Ok = 0;
+    IdNotExist = 1;
+    HasNoRightToday = 2;
+    IsAcceptTaskId = 3;
+    IsDropedTaskId = 4;
+    IsFinishedTaskId = 5;
+    TaskIsFull = 6;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

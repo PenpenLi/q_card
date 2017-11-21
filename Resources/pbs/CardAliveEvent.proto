@@ -1,0 +1,17 @@
+package DianShiTech.Protocal;
+
+message CardAliveEvent {
+  enum traits { value = 8102;}
+  enum CardAliveState{
+	CardAliveStateAlive = 0;
+	CardAliveStateDead = 1;
+  }
+  required int32 card_index = 1;
+  required CardAliveState state = 2; 
+  required int32 pos = 3;
+  optional bool canRevive = 4;
+  optional bool isChangeGroup = 5;
+  optional int32 changedGroup = 6;
+  optional int32 isGhost = 7;
+  optional bool isDownGroupAngry = 8;
+}

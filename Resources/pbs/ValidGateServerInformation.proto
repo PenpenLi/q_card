@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message ValidGateServerInformation {
+  enum traits { value = 3000;}
+  required string address = 1;
+  required int32 port = 2;
+}

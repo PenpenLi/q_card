@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message ReqActivityMissionAward{
+	enum traits{ value = 10064;}
+	required int32 activity_type = 1;
+	required int32 mission_id = 2;
+}

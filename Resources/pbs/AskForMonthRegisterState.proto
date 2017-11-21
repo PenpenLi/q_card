@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message AskForMonthRegisterState {
+  enum traits { value = 3339;}
+}

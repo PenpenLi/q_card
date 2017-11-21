@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message ReqForcibleBuyActivityStage{
+ enum traits { value = 10032;}
+ required int32 activity_id = 1;
+ required int32 stage_id = 2;
+}

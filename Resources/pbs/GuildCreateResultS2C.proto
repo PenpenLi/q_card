@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "GuildSync.proto";
+import "ClientSync.proto";
+message GuildCreateResultS2C{
+	enum traits{value = 5177;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NAME_ERROR = 2;		//公会名字错误
+		LEVEL_LIMIT = 3;  	//等级不够
+		NOTICE_ERROR = 4; 	//公告错误
+		FLAG_ERROR = 5;		//旗帜错误
+		NEED_MORE_MONEY = 6;//需要更多的钱
+		HAS_GUILD = 7;		//有公会了
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+	optional ClientSync client = 3;
+}

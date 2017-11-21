@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message BossFightClearTimeC2S{
+  enum traits {value = 5052;}
+
+  required int32 boss = 1;
+}

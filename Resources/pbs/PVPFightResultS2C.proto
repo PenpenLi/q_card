@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import "PVPDataSyncCommon.proto";
+import "ClientSync.proto";
+message PVPFightResultS2C{
+  enum traits{
+    value = 5028 ;
+  }
+
+  required PVPDataSyncCommon common = 1;
+  required int32 reportId = 2;
+  optional ClientSync client = 4;
+  optional int32 stopKeepWin = 5;
+}

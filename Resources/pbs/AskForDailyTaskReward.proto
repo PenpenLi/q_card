@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message AskForDailyTaskReward {
+  enum traits { value = 4417;}
+  required int32 id = 1;
+}

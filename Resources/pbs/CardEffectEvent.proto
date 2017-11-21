@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+
+message CardEffectEvent {
+  enum traits { value = 8110;}
+  required int32 card_index = 1;
+  required int32 skill_effect_id = 2;
+}

@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+import "GuildSync.proto";
+message GuildChangeMemberResultS2C{
+	enum traits{value = 5181;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		LEVEL_LIMIT = 2;		//等级不够
+		AUTHORITY_LIMIT = 3;	//权限不够
+		ARGS_ERROR = 4;			//参数错误
+		NOT_FOUND_PLAYER = 5;	//没有找到玩家
+		PLAYER_HAS_JOIN = 6;	//玩家已经加入别的公会
+		NOT_FOUND_GUILD = 7;	//没有找到公会
+		NOT_KICK_SELF = 8;		//不能踢自己
+		TARGET_HIGHT_JOB = 9;	//对方职位比自己高
+		PLAYER_FULL = 10;		//公会人数已经满了
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <plists>
+        <plist>loading_run.plist</plist>
+    </plists>
+    <animations>
+        <animation>
+            <name>loading_run</name>
+            <delay>0.05</delay>
+            <spriteFrame>loading_guanyurun0001.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0002.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0003.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0004.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0005.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0006.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0007.png</spriteFrame>
+            <spriteFrame>loading_guanyurun0008.png</spriteFrame>
+        </animation>
+    </animations>
+    <sprites>
+        <sprite>loading_guanyurun0001.png</sprite>
+        <sprite>loading_guanyurun0002.png</sprite>
+        <sprite>loading_guanyurun0003.png</sprite>
+        <sprite>loading_guanyurun0004.png</sprite>
+        <sprite>loading_guanyurun0005.png</sprite>
+        <sprite>loading_guanyurun0006.png</sprite>
+        <sprite>loading_guanyurun0007.png</sprite>
+        <sprite>loading_guanyurun0008.png</sprite>
+    </sprites>
+</root>

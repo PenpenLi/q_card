@@ -1,0 +1,29 @@
+package DianShiTech.Protocal;
+
+message CommanderCard {
+  enum HpType{
+	BableType = 0;
+  }
+  message CardHpInfo{
+	optional HpType hp_type = 1;
+	optional int32 card_hp_per = 2;
+  }
+  
+  required int32 id = 1;				//卡牌ID
+  optional bool is_leader= 2;			//是否主帅
+  optional int32 weapon = 5;			//当前武器
+  optional int32 armor = 6;				//当前盔甲
+  optional int32 adornment = 4;			//当前饰品
+  optional int32 config_id = 3;			//卡牌配置ID
+  optional int32 skill_experience = 7;	//卡牌技能经验
+  optional int32 position = 8;			//卡牌位置
+  optional int32 experience = 10;		//卡牌经验
+  optional bool is_active = 11;			//是否出战	
+  enum MineState{
+    MINE_NONE   = 1; 	//非矿产状态		
+    MINE_NORMAL = 2;	//矿产空闲
+    MINE_WORK   = 3;	//矿产打工
+  }
+  optional MineState state = 12;		//打工状态(矿产)
+  repeated CardHpInfo card_hp_per = 13;	//卡牌血量万分比
+}

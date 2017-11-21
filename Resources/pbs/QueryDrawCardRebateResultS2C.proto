@@ -1,0 +1,16 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+import "DrawCardRebate.proto";
+message QueryDrawCardRebateResultS2C {
+  enum traits{value = 5106;}
+  enum ErrorCode{
+    NO_ERROR_CODE = 0;
+    NOT_FOUND_ID = 1;
+    NO_REBATE = 2;
+    DATE_TIME_OUT = 3;
+    NO_AWARD = 4;
+  }
+  
+  optional ErrorCode error = 1;         //错误码
+  optional ClientSync client = 2;       //数据更新
+}

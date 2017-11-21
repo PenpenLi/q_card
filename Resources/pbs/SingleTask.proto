@@ -1,0 +1,7 @@
+import "TaskConditionState.proto";
+package DianShiTech.Protocal;
+message SingleTask {
+  required int32 config_id = 2; // id in config table
+  optional int32 id = 1; // id of task in player. not used in main task and side task
+  repeated TaskConditionState condition = 3;
+}

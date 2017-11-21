@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message BableSetHelpFriendCountC2B{
+  enum traits {
+    value = 10101;
+  }
+  optional ClientSync client_sync = 1;
+  optional int32 friendId = 2;
+}

@@ -1,0 +1,11 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//选择是否验证通过好友
+message MsgC2SChooseInvite{
+  enum trauts{
+  value = 5003;
+  }
+  required int32 id = 1;
+  required bool  choose = 2;
+}

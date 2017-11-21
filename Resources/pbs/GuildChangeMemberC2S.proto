@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+message GuildChangeMemberC2S{
+	enum traits{value = 5180;}
+	enum Action{
+		_APPLY_ = 4;	//收人
+		_CHANGE_ = 1; 	//修改职位
+		_KICK_ = 2;		//踢人
+		_BAN_ = 3;		//禁言
+	};
+	required int32 player = 1;
+	required Action action = 2;
+	optional int32 args = 3; //参数 如果禁言是时间 如果是修改职位GuildMember.GUILD_JOB
+}

@@ -1,0 +1,9 @@
+import "AchievementProgress.proto";
+package DianShiTech.Protocal;
+message AchievementProgressB2C{
+ enum traits { value = 9900;}
+ message AchievementProgressInfo {
+  repeated AchievementProgress data = 1;
+ }
+ required AchievementProgressInfo info = 1;
+}

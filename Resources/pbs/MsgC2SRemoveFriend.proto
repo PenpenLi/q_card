@@ -1,0 +1,10 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//移除好友请求
+message MsgC2SRemoveFriend{
+  enum trauts{
+    value = 5006;
+  }
+  required int32 id = 1;
+}

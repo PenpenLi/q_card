@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message OpenItemCell {
+  enum traits { value = 3333;}
+  optional int32 count = 1;
+}

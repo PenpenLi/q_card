@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "GuildSync.proto";
+import "ClientSync.proto";
+message GuildDonateResultS2C{
+	enum traits{value = 5183;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_FOUND_GUILD = 2;		//没有公会
+		NOT_HAS_ENOUGH_MONEY = 3;	//没有足够的货币
+		NEED_JOIN_TIME = 4;			//已经捐献过了
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+	optional ClientSync client = 3;
+	
+	optional int32 type = 4;		//类型
+	optional int32 guild_point = 5;
+}

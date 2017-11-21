@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+
+message CardTurnEvent {
+  enum traits { value = 8108;}
+  required int32 card_index = 1;
+  optional int32 cur_round = 2;
+}

@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message ResetMasterCard {
+  enum traits { value = 1081;}
+  required int32 card_id = 1;
+}

@@ -1,0 +1,17 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+
+message EatEquipResult {
+  enum traits { value = 10043;}
+  enum State {
+    Ok = 0;
+    NotEnoughCurrency = 1;			//没有足够的货币
+    CouldNotEatAnyMore = 2;			//该装备不能升经验
+	ItemCannotEat = 3;				//错误的物品类型，不是玄铁
+	NotHaveItemToEat = 4;			//背包没有所需要的玄铁或者玄铁个数不足
+	EquipCanNotUpgrade = 5;			//经验已经满了，不能再吃玄铁
+	CouldNotEatAnyMoreSuc = 6;		//已经消耗了一部分玄铁，但是没有都吃完，还是算做成功
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

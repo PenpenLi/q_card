@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message GreatDrawCardC2S{
+	enum traits{ value = 5211;}
+	optional int32 configId = 1; //配置ID
+	optional int32 free = 2; //是否免费点将
+}

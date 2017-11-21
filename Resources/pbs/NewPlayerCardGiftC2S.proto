@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message NewPlayerCardGiftC2S {
+  enum traits { value = 5139;}
+  required int32 gift = 1;
+}

@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message PVPArenaQueryC2S{
+	enum traits{value = 5127;}
+}

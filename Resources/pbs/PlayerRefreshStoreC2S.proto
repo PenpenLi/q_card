@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "StoreItem.proto";
+message PlayerRefreshStoreC2S{
+	enum traits {value = 5151;}
+	optional int32 type = 1;  //商店类型
+	optional int32 use_money = 2;
+}

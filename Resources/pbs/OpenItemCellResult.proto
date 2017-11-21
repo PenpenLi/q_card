@@ -1,0 +1,13 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message OpenItemCellResult {
+  enum traits { value = 3334;}
+  enum State {
+    Ok = 0;
+    TooMuchCellCount = 1;
+    NotEnoughCurrency = 2;
+  }
+  required State state = 1;
+  optional int32 item_cell_count = 2;
+  optional ClientSync client_sync = 3;
+}

@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message AskForOnlineReward {
+  enum traits { value = 2555;}
+}

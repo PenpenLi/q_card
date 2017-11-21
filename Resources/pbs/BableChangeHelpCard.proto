@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PlayerFriends.proto";
+message BableChangeHelpCard{
+   enum traits {value = 10088;}
+   optional FriendHelpSimpleInfo friend_help_info = 1;
+   optional int32 friend_id = 2;
+}

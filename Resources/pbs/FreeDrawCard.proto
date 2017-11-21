@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message FreeDrawCard {
+  enum traits { value = 3215;}
+}

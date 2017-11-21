@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "BattleFormation.proto";
+message SaveBattleFormationC2S{
+	enum traits{value = 5171;}
+	required BattleFormation battle = 1; //阵容
+}

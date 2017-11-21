@@ -1,0 +1,11 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+
+message SaveBattlePositionResult {
+  enum traits { value = 4399;}
+  enum State {
+    Ok = 0;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

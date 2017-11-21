@@ -1,0 +1,19 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//
+message MsgS2CInviteResult{
+  enum trauts{
+    value = 5005;
+  }
+
+  enum Result{
+    INVITE_OK = 0;
+    NOT_FOUND_NICKNAME = 1;
+    FRIEND_LIST_FULL = 2;
+    INVITE_IS_YOU_FRIEND = 3;
+    INVITE_IS_IN_LIST = 4;//处理再次发送申请好友请求
+    TARGET_FRIEND_FULL = 5;
+  }
+  optional Result r = 1 ;
+}

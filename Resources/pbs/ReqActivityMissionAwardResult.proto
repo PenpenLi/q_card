@@ -1,0 +1,16 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqActivityMissionAwardResult{
+	enum traits { value = 10065;}
+	enum State{
+	   Ok = 0;
+	   AlreadGetAward = 1;	    //已经领取过奖励了
+	   NotDone = 2;			    //该任务还没有完成
+	   ActivityIsNotOpen = 3;	//没有改活动或者该活动还没有开启
+	   MissionError = 4;        //没有该任务
+	}
+	required State state = 1;
+	required int32 activity_id = 2;
+	required int32 mission_id = 3;
+	optional ClientSync client_sync = 4;
+}

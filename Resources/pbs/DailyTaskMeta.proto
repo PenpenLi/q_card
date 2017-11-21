@@ -1,0 +1,12 @@
+package DianShiTech.Protocal;
+message DailyTaskMeta {
+  required int32 id = 1;
+  required int32 daily_task = 2;
+  enum State {
+    Show = 0;
+    Accept = 1;
+    Finished = 2;
+    Drop = 3;
+  }
+  optional State state = 3;
+}

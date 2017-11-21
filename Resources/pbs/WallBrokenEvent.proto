@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+
+message WallBrokenEvent {
+  enum traits { value = 8103;}
+  required int32 wall_group = 1; 
+}

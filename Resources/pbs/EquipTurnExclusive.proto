@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message EquipTurnExclusive {
+  enum traits { value = 10059;}
+  required int32 equip_id = 1;
+}
+

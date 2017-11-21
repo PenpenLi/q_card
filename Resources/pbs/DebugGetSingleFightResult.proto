@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message DebugGetSingleFightResult {
+  enum traits { value = 1543;}
+}

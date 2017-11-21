@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message PVPUseProtectItemResultS2C{
+	enum traits{ value = 5119;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_HAS_ENOUGH_ITEM = 2;
+		SYSTEM_ERROR = 3;
+	}
+	
+	required ErrorCode	  error = 1;
+	optional ClientSync   client = 3;
+}

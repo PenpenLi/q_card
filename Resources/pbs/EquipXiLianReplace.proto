@@ -1,0 +1,6 @@
+
+package DianShiTech.Protocal;
+message EquipXiLianReplace {
+  enum traits { value = 10050;}
+  required int32 equip_id = 1;
+}

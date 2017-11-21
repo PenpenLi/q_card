@@ -1,0 +1,11 @@
+
+CommonDefine.h 中设置
+Q卡三国用户平台（User mapping） login.m543.com   /  login.m543.com.cn
+Q卡三国用户平台（User Center） u.m543.com    /   u.m543.com.cn
+
+
+二区
+login3002.qcard3.com:10099
+三区
+login3003.qcard3.com:10099
+

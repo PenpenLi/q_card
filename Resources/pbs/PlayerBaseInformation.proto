@@ -1,0 +1,73 @@
+import "CommanderCardGroup.proto";
+import "Item.proto";
+import "Equipment.proto";
+import "InstanceData.proto";
+import "CardPictureState.proto";
+import "TaskState.proto";
+import "SyncCommon.proto";
+import "MoneyHistoryInformation.proto";
+import "EquipmentStatics.proto";
+import "VipState.proto";
+import "DailyTaskTable.proto";
+import "PlayerAchievementState.proto";
+import "DrawCardRebate.proto";
+import "Talent.proto";
+import "PlayerAwardRecord.proto";
+import "BattleFormation.proto";
+import "PlayerFightBaseData.proto";
+import "BableInfo.proto";
+import "FightBuff.proto";
+package DianShiTech.Protocal;
+message PlayerBaseInformation {
+  enum traits {
+    value = 1024;
+  }
+  message CardInformation {
+    repeated CommanderCard card = 1;
+  }
+  message ItemInformation {
+    repeated Item item = 1;
+  }
+  message EquipmentInformation {
+    repeated Equipment equipment = 1;
+  }
+
+  message InstanceInfomation{
+    repeated InstanceData instance = 1;
+  }
+
+  message PictureInformation {
+    repeated CardPictureState object = 1;
+  }
+  message DrawCardRebateInformation{
+    repeated DrawCardRebate list = 1;
+  }
+  
+  optional int32 id = 1;									//玩家ID
+  optional string nick_name = 2;							//昵称
+  optional BaseSync common = 3;								//玩家基础数据
+  optional CardInformation card = 4;						//卡牌
+  optional ItemInformation item = 5;						//道具
+  optional EquipmentInformation equipment = 6;				//装备
+  optional int32 sync_id = 7; // not used for client		//服务器使用,作为玩家身上的道具,卡牌,装备唯一id
+  optional InstanceInfomation instance = 8; //instance		//副本信息
+  optional PictureInformation collection = 9; 				//图鉴 
+  optional TaskState task = 10;								//任务		
+  optional MoneyHistoryInformation money_history = 11;		//
+  optional EquipmentStatics equipment_statics = 12;			//装备图鉴
+  optional VipState vip_state = 13;							//月卡以及VIP的一些附加数据
+  optional DailyTaskTable daily_task_table = 14;			//日常任务	
+  optional PlayerAchievementState achievement_state = 15;	//成就
+  optional int32 newbird_step = 16;							//新手引导步骤
+  optional int32 last_free_draw_time = 17;					//上次免费点将
+  optional int32 last_loyalty_free_draw_time = 18;			//上次免费民心点将
+  optional int32 last_free_great_draw_time = 25;			//神将掉落时间
+  
+  // add by wufan for rebate 
+  optional DrawCardRebateInformation rebate = 19;			//抽卡返利信息
+  optional PlayerTalent talent = 20;						//天赋信息
+  optional PlayerAwardRecord award_record = 21;				//奖励领取记录
+  optional AppendFightBuffer append_buffer = 22;			//附加战斗buff
+  optional BattleSaveCards battle = 23; 					//保存阵容信息
+  optional BableInfo bable_info = 24;						//通天塔信息
+}

@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message Logout {
+  enum traits {
+    value = 5109;
+  }
+}

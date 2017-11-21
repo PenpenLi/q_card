@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message ChangeAvatar {
+  enum traits { value = 3779;}
+  required int32 avatar_id = 1;
+}

@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message GuildOpenInstanceC2S{
+	enum traits{value = 5184;}
+	required int32 chepter = 1;
+}

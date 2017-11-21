@@ -1,0 +1,77 @@
+import "BattleCommon.proto";
+package DianShiTech.Protocal;
+
+message NormalBattleResult {
+  enum traits { value = 8000;}
+  enum PbFightState {
+    Ok = 0;
+    NoBlueMaster = 1;
+    NoRedMaster = 2;
+    BlueTeamEmpty = 3;
+    RedTeamEmpty = 4;
+  }
+
+  message PbDropItem {
+	required int32 drop_id = 1;
+	required int32 from_card_id = 2;
+  }
+  message PbFightResult {
+	required int32 result_type = 1;
+	optional int32 win_group = 2;
+	optional int32 win_player_id = 3;
+	optional int32 final_hp = 4;
+	optional int32 final_hp_percent = 5;
+	repeated PbDropItem drop_items = 6;
+	optional int32 total_damage = 7;
+	optional int32 is_fit_stage_condition = 8;
+  }
+  message PbPlayer {
+	required int32 player_id = 1;
+	required int32 group = 2;
+	optional int32 boss_hp = 3;
+  optional int32 boss_maxhp = 4;
+  }
+  message PbCard {
+	required int32 index = 1;
+	optional int32 id = 14;
+    required int32 card_id = 2;
+    required int32 init_hp = 3;
+	optional int32 init_hpper = 16;//初始化血量百分比
+	required int32 init_pos = 4;
+	required int32 group = 5;
+    required int32 type = 6;
+    required bool is_primary = 7;
+	required bool is_rotate = 8;
+	required int32 init_angry = 9;
+	optional bool is_alive = 10;
+	optional int32 damage_bear = 11;
+	optional int32 damage_out = 12;
+	optional int32 hp_ratio = 13;
+	optional int32 card_owner_type = 15;  //卡牌来源类型
+  }
+  message PbField {
+    required int32 init_pos = 1;
+    required int32 type = 2;
+  }
+  message PbWall {
+    required int32 level = 1;
+    required int32 hp = 2;
+	required int32 group = 3;
+  }
+  message PbEvent {
+	required int32 type = 1;
+	required bytes event_info = 2;
+  }
+  required PbFightState state = 1;
+  required PbFightResult result = 2;
+  required int32 map_id = 3;
+  required int32 map_level = 4;
+  repeated PbPlayer players = 5;
+  repeated PbCard cards = 6;
+  repeated PbField fields = 7;
+  repeated PbWall walls = 8;
+  repeated PbEvent events = 9;
+  required int32 battle_type = 10;
+  required int32 boss_group = 11;
+  optional int32 battle_theme = 12;
+}

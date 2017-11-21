@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>loadingkuang.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{484,365}}</string>
+                <key>offset</key>
+                <string>{0,-2}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{4,4},{484,365}}</string>
+                <key>sourceSize</key>
+                <string>{492,369}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>loading_kuang.png</string>
+            <key>size</key>
+            <string>{512,512}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:411f03f6e2a173b66baefce926a7034d:e8e033d351b84c8c409a7a311281d608:62de6ea2fda9a2f9cefbc8916c9eb178$</string>
+            <key>textureFileName</key>
+            <string>loading_kuang.png</string>
+        </dict>
+    </dict>
+</plist>

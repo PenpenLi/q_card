@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message ShareReportC2S{
+	enum traits{ value = 5210;}
+	optional FightType ft = 1;				//战报类型 
+	optional int32 report = 2;				//战报id
+}

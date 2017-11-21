@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message BindGameNickName {
+  enum traits { value = 1033;}
+  required bytes nick_name = 1;
+}

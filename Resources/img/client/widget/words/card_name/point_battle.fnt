@@ -1,0 +1,14 @@
+info face="·½Õý´ÖÔ²¼òÌå" size=30 bold=0 italic=0 charset="" unicode=1 stretchH=100 smooth=1 aa=1 padding=7,7,7,7 spacing=4,4 outline=0
+common lineHeight=30 base=24 scaleW=128 scaleH=128 pages=1 packed=0 alphaChnl=1 redChnl=0 greenChnl=0 blueChnl=0
+page id=0 file="point_battle_0.png"
+chars count=10
+char id=48   x=0     y=38    width=30    height=33    xoffset=-7    yoffset=-2    xadvance=15    page=0  chnl=15
+char id=49   x=100   y=0     width=23    height=33    xoffset=-7    yoffset=-2    xadvance=10    page=0  chnl=15
+char id=50   x=66    y=75    width=28    height=33    xoffset=-6    yoffset=-2    xadvance=15    page=0  chnl=15
+char id=51   x=34    y=0     width=29    height=34    xoffset=-7    yoffset=-3    xadvance=15    page=0  chnl=15
+char id=52   x=0     y=0     width=30    height=34    xoffset=-7    yoffset=-3    xadvance=15    page=0  chnl=15
+char id=53   x=34    y=38    width=29    height=33    xoffset=-7    yoffset=-2    xadvance=15    page=0  chnl=15
+char id=54   x=67    y=0     width=29    height=34    xoffset=-7    yoffset=-3    xadvance=15    page=0  chnl=15
+char id=55   x=67    y=38    width=29    height=33    xoffset=-7    yoffset=-2    xadvance=14    page=0  chnl=15
+char id=56   x=0     y=75    width=29    height=33    xoffset=-7    yoffset=-2    xadvance=15    page=0  chnl=15
+char id=57   x=33    y=75    width=29    height=33    xoffset=-7    yoffset=-2    xadvance=15    page=0  chnl=15

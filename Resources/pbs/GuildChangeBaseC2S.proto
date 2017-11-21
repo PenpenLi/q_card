@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message GuildChangeBaseC2S{
+	enum traits{value = 5197;}
+	optional string guild_notice = 1;
+	optional int32 guild_flag = 2;
+	optional int32 apply_level = 3;
+}

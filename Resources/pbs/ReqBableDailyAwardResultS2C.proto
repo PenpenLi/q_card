@@ -1,0 +1,13 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqBableDailyAwardResultS2C{
+   enum traits {value = 10095;}
+   enum State{
+	  ConfigError = 1;
+	  AlreadyGetAward = 2;		//已经领取过奖励了
+	  DonotFightBable = 3;		//今天还没打过通天塔，不能领取奖励
+	  Success = 4;
+   }
+   required State state = 1;
+   optional ClientSync client_sync = 2;
+}

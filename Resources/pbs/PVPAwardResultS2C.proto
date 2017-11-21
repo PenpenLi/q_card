@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+import "PVPDataSyncCommon.proto";
+
+message PVPAwardResultS2C{
+  enum traits{value = 5032;}
+
+  enum ErrorCode {
+   NO_ERROR_CODE = 1;
+   NO_AWARD = 2;
+   NOT_ALLOW_AWARD = 3;
+   IS_GONE_AWARD = 4;
+   SYSTEM_ERROR = 5;
+  }
+  required ErrorCode error = 1;
+  optional ClientSync client = 2;
+  optional PVPDataSyncCommon common = 3;
+
+}

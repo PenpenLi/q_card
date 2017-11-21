@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message ActivityProgressS2C{
+	enum traits{ value = 5141;}
+	message Progress{
+		optional int32 id = 1;			//活动
+		optional int32 index = 4;		//活动表的act_same_index()
+		optional int32 progress = 2;	//进度
+		optional int32 last_time = 3;	//最近一次更新时间
+	}
+	repeated Progress activity = 1;	//活动数据
+}

@@ -1,0 +1,16 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message TalentBankLevelUpResultS2C{
+	enum traits{value = 5113;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;			//成功
+		NEED_MORE_COIN = 2;			//需要更多铜币
+		BANK_IN_LEVEL_UP = 3;  		//银行正在升级
+		PLAYER_LEVEL_LIMIT = 4;		//玩家等级不够
+		BANK_MAX_LEVEL = 5;			//银行等级满了
+		SYSTEM_ERROR = 8;			//其他错误
+	}
+	
+	required ErrorCode error = 1;
+	optional ClientSync client = 2;
+}

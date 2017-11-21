@@ -1,0 +1,12 @@
+package DianShiTech.Protocal;
+import "InteractPlayerBase.proto";
+message InteractGetCoinResultS2C{
+   enum traits{value = 5076;}
+   enum ErrorCode{
+    NO_ERROR_CODE = 1;
+    NOT_FOUND_COIN = 2;
+    SYSTEM_ERROR = 3;
+   }
+   required ErrorCode error = 1;
+   optional InteractDataUpdate update = 2;
+}

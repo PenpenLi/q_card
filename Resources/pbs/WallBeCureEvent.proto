@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+
+message WallBeCureEvent {
+  enum traits { value = 8112;}
+  required int32 wall_group = 1; 
+  required int32 be_cure_hp = 2;
+  required int32 final_hp = 3;
+}

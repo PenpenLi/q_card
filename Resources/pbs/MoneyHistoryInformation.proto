@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message MoneyHistoryInformation {
+  enum traits { value = 3275;}
+  optional int32 total_recharge_money = 1;
+  optional int32 total_recharge_point = 2;
+  optional int32 total_consume_money = 3;
+  optional int32 total_consume_point = 4;
+  optional int32 total_vip_consume_money = 5;
+  optional int32 total_vip_consume_point = 6;
+}

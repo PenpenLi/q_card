@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message GuildCreateApplyC2S{
+	enum traits{value = 5178;}
+	required int32 guild_id  = 1;
+}

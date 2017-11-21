@@ -1,0 +1,18 @@
+package DianShiTech.Protocal;
+message AwardRecord{
+	//可以动态扩展
+	enum AwardType{
+		CHEPTER_AWARD = 1;	//章节星星奖励
+		BIGWHEEL_AWARD = 2;	//大转盘奖励
+		BABLE_AWARD = 3;	//通天塔奖励
+	 }
+	optional int32 id = 1;
+	optional AwardType type = 2;
+	optional int32 data = 3;
+}
+message PlayerAwardRecord{
+	repeated AwardRecord chepter = 1;   //星星奖励
+	repeated AwardRecord bigwheel = 2;	//大转盘奖励
+	repeated AwardRecord bable = 3;		//通天塔奖励
+}
+ 

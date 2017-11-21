@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message QueryAwardResultS2C{
+	 enum traits { value = 5157;}
+	 enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NO_AWARD	  = 2;
+		HAS_GET_AWARD = 3;
+		SYSTEM_ERROR = 500;
+	 };
+	 required ErrorCode error = 1;
+	 optional ClientSync client = 2;
+}

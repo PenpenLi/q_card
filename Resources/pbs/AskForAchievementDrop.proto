@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+message AskForAchievementDrop {
+  enum traits {
+    value = 9909;
+  }
+  required int32 config_id = 1;
+  //required int32 is_vip = 2;
+}

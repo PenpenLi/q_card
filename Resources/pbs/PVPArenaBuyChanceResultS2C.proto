@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "PVPArenaBase.proto";
+import "ClientSync.proto";
+message PVPArenaBuyChanceResultS2C{
+	enum traits{value = 5147;}	
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_HAS_ENOUGH_MONEY = 2;
+		PVP_ARENA_CLOSE = 3;
+		NOT_FOUND_AREAN_DATA = 5;
+		HAS_SEARCH_COUNT = 6;
+		LEVEL_LIMIT = 7;
+		SYSTEM_ERROR = 4;
+	}
+	required ErrorCode    error  = 1;
+	optional PVPArenaBase base = 2;
+	optional ClientSync   client = 3;
+	optional int32        cost = 4;
+}

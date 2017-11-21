@@ -1,0 +1,51 @@
+<skeleton name="xiansheng" frameRate="30" version="2.2">
+ <armatures>
+  <armature name="ws_dh_pz1_mc_xs">
+   <b name="字" x="3.1" y="-15.25" kX="0" kY="0" cX="3.31" cY="3.31" pX="0" pY="0" z="0">
+    <d name="ws_dh_zt3" pX="125.15" pY="64.95"/>
+   </b>
+  </armature>
+ </armatures>
+ <animations>
+  <animation name="ws_dh_pz1_mc_xs">
+   <mov name="default" dr="11" to="6" drTW="11" lp="0" twE="NaN">
+    <b name="字" sc="1" dl="0">
+     <f x="3.1" y="-15.25" cocos2d_x="3.1" cocos2d_y="-15.25" kX="0" kY="0" cX="3.31" cY="3.31" pX="0" pY="0" z="0" dI="0" twE="-1" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="58" gM="58" bM="58"/>
+     </f>
+     <f x="3.1" y="-15.3" cocos2d_x="3.1" cocos2d_y="-15.3" kX="0" kY="0" cX="3.28" cY="3.28" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="58" gM="58" bM="58"/>
+     </f>
+     <f x="3.05" y="-15.25" cocos2d_x="3.05" cocos2d_y="-15.25" kX="0" kY="0" cX="3.22" cY="3.22" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="59" gM="59" bM="59"/>
+     </f>
+     <f x="3.05" y="-15.3" cocos2d_x="3.05" cocos2d_y="-15.3" kX="0" kY="0" cX="3.1" cY="3.1" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="62" gM="62" bM="62"/>
+     </f>
+     <f x="3.05" y="-15.3" cocos2d_x="3.05" cocos2d_y="-15.3" kX="0" kY="0" cX="2.94" cY="2.94" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="64" gM="64" bM="64"/>
+     </f>
+     <f x="3.05" y="-15.3" cocos2d_x="3.05" cocos2d_y="-15.3" kX="0" kY="0" cX="2.73" cY="2.73" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="68" gM="68" bM="68"/>
+     </f>
+     <f x="3.05" y="-15.25" cocos2d_x="3.05" cocos2d_y="-15.25" kX="0" kY="0" cX="2.48" cY="2.48" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="73" gM="73" bM="73"/>
+     </f>
+     <f x="3.1" y="-15.3" cocos2d_x="3.1" cocos2d_y="-15.3" kX="0" kY="0" cX="2.18" cY="2.18" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="79" gM="79" bM="79"/>
+     </f>
+     <f x="3.05" y="-15.3" cocos2d_x="3.05" cocos2d_y="-15.3" kX="0" kY="0" cX="1.83" cY="1.83" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="85" gM="85" bM="85"/>
+     </f>
+     <f x="3.1" y="-15.3" cocos2d_x="3.1" cocos2d_y="-15.3" kX="0" kY="0" cX="1.44" cY="1.44" pX="0" pY="0" z="0" dI="0" twE="0" dr="1">
+      <colorTransform a="0" r="0" g="0" b="0" aM="100" rM="92" gM="92" bM="92"/>
+     </f>
+     <f x="3.1" y="-15.25" cocos2d_x="3.1" cocos2d_y="-15.25" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0" dI="0" twE="1" dr="1"/>
+    </b>
+   </mov>
+  </animation>
+ </animations>
+ <TextureAtlas name="xiansheng" width="256" height="256">
+  <SubTexture name="ws_dh_zt3" width="251" height="130" cocos2d_pX="125.15" cocos2d_pY="64.95" x="0" y="0"/>
+ </TextureAtlas>
+</skeleton>

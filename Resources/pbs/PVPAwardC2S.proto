@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+message PVPAwardC2S{
+  enum traits{
+    value = 5029 ;
+  }
+  enum AwardType{
+    KEEP_WIN_AWARD = 1;
+    RANK_AWARD = 2;
+	DAY_WIN_AWARD = 3;
+  }
+
+  required AwardType type = 1;
+  optional int32     rank = 2;  // 领取阶段奖励的时候，才有奖励
+
+}

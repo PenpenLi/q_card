@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message VipFreeRefreshDailyTaskTable {
+  enum traits { value = 4725;}
+}

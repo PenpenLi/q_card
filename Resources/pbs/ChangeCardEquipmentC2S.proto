@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message ChangeCardEquipmentC2S {
+  enum traits { value = 5099;}
+  enum Action{
+    Dress = 1;
+    UnDress = 2;
+  }
+  repeated int32  card_id = 1; 		// card_id = 0时候，属于所有上阵卡牌操作。即所谓的一键换装
+  required int32  equipment_id = 2; // equipment_id = 0 的时候一键操作卡牌的装备
+  required Action action = 3;  		// 脱下或者装上
+}

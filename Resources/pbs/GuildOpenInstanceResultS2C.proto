@@ -1,0 +1,17 @@
+package DianShiTech.Protocal;
+import "GuildSync.proto";
+message GuildOpenInstanceResultS2C{
+	enum traits{value = 5185;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_FOUND_GUILD = 2;		//没有公会
+		AUTHORITY_LIMIT = 3;		//权限不够
+		GUILD_LEVEL_LIMIT = 4;		//公会等级不够
+		GUILD_MONEY_LIMIT = 5;		//公会元宝不够
+		GUILD_GOLD_LIMIT = 6;		//公会金币不够
+		INSTANCE_OPENED = 7;		//公会副本已经开启
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+}

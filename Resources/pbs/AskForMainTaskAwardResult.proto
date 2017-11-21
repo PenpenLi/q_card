@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message AskForMainTaskAwardResult {
+  enum traits { value = 3568;}
+  enum State {
+    Ok = 0;
+    TaskNotExist = 2;
+    NeedLevel = 3;
+    NeedCondition = 4;
+    NoMoreTask = 5;
+  }
+  required State state = 1;
+  optional int32 task_id = 3;
+  optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message GuildLevelUpBuildC2S{
+	enum traits{value = 5188;}
+	required int32 build = 1;
+}

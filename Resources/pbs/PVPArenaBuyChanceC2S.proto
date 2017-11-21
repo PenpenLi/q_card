@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "PVPArenaBase.proto";
+message PVPArenaBuyChanceC2S{
+	enum traits{value = 5146;}	
+	optional int32 cost = 1;
+}

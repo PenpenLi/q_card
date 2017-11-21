@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+
+// 请求PVP的一些基础信息
+message PVPQueryDataC2S{
+  enum traits{
+    value = 5020 ;
+  }
+}

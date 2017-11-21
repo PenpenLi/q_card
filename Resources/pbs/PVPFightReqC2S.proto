@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message PVPFightReqC2S{
+  enum traits{
+    value = 5030;
+  }
+  required FightCards cards = 1;
+}

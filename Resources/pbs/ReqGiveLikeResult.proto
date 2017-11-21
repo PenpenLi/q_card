@@ -1,0 +1,14 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqGiveLikeResult{
+  enum traits{ value = 10070;}
+  enum Result{
+    TodayAlreadyGiveLike = 1;		//今天已经点过赞了
+	CanNotGiveSelfLike = 2;			//不能给自己点赞
+	ConfigError = 3;				//配置错误
+	Success = 4;
+  }
+
+  required Result result = 1;
+  optional ClientSync client_sync = 2;
+}

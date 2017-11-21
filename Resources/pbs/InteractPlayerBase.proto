@@ -1,0 +1,98 @@
+package DianShiTech.Protocal;
+import "CommanderCardGroup.proto";
+import "ClientSync.proto";
+enum InteractCostType{
+  POS_COST_INTERACT = 1;
+}
+message MineAward{
+  required int32 coin = 1;
+  optional int32 loyalty = 2;
+}
+//
+message MinerCard{
+  required int32 ower     = 1;        //
+  required int32 card     = 2;        //
+  optional int32 miners   = 3;        //
+  optional int32 pos      = 4;        //
+  optional int32 start    = 5;        //
+  optional int32 duration = 6;        //
+  optional MineAward award= 7;        //
+  optional int32 safeTime = 10;
+  optional CommanderCard info = 8;
+  optional string minerName   = 9;
+  optional string ownerName = 11;
+}
+//miner's pos info
+message MinerPos{
+  required uint32 pos     = 1;
+  required MinerCard card = 2;
+}
+//data
+message InteractServerData{
+  required int32          id        = 1;
+  repeated MinerPos       pos       = 2;
+  required uint32         pos_count = 5;
+  repeated MinerCard      card      = 3;
+  required uint32         card_count= 6;
+  required MineAward      award     = 4;
+  //repeated uint32		  reports   = 7;
+  required uint32		  flag		= 8;
+}
+//report
+message InteractReport{
+  enum ReportType{
+    REPORT_FIGHT  = 1;//
+    REPORT_WORK   = 2;//
+  }
+  required uint32       id          = 1;	//战报ID
+  required ReportType   type        = 2;	//类型
+  required MineAward    award       = 3;	//奖励
+  required uint32       time        = 4;	//时间
+  optional MineAward    awardminer  = 12;	//矿主奖励
+  required int32        miners      = 5;  	//矿主
+  optional string       minerName   = 6;	//矿主名字
+  required int32        worker      = 7;  //正在打工的人
+  optional string       workerName  = 8;	//打工的人的名字
+  optional int32        attacker    = 9; //攻击方
+  optional string       attackerName= 10;	//攻击方的名字
+  optional int32        winner = 11;	 //如果是战斗类战报 赢家ID
+  
+  optional uint32		    flag		= 13;
+}
+
+// all data
+message InteractData{
+  required InteractServerData   base    = 1;
+  repeated InteractReport       report  = 2;
+}
+// data update
+message InteractDataUpdate{
+
+  enum Operator {
+    OP_ADD    = 1;
+    OP_UPDATE = 2;
+    OP_REMOVE = 3;
+  }
+
+  message InteractBase{
+    required int32      ower        = 1;
+    required uint32     pos_count   = 2;
+    required uint32     card_count  = 3;
+    required MineAward  award       = 4;
+  }
+  message InteractCard{
+     required MinerCard card  = 1;
+     required Operator  op    = 2;
+  }
+  message InteractPos{
+    required MinerPos pos = 1;
+    required Operator op  = 2;
+  }
+
+  optional ClientSync  client  = 4;
+
+  required InteractBase base    = 1;
+  repeated InteractCard cards   = 2;
+  repeated InteractPos  poss    = 3;
+  repeated InteractReport report = 5;
+}

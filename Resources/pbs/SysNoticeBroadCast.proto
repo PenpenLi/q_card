@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message SysNoticeBroadCast{
+  enum traits{value = 9601;}
+  required string str = 1;
+}

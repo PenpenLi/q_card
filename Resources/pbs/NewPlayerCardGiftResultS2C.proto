@@ -1,0 +1,12 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message NewPlayerCardGiftResultS2C {
+  enum traits { value = 5140;}
+  enum ErrorCode {
+   NO_ERROR_CODE = 1;
+   HAS_GET_GIFT = 2;
+   GIFT_CODE_ERROR = 3;
+  }
+  required ErrorCode state = 1;
+  optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message ReceiveDailyTask {
+  enum traits { value = 3761;}
+  optional int32 id = 1; // pos in table
+}

@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message ResetMasterCardResult {
+  enum traits { value = 1082;}
+  enum State {
+    Ok = 0;
+    NotValidActiveCard = 1;
+  }
+  required State state = 1;
+  optional ClientSync 	client = 2;	
+}

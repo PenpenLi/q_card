@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message AskForCanEatPattyResult {
+  enum traits { value = 3546;}
+  enum State {
+    Ok = 0;
+    TimeIsNotValid = 1;
+    HasEatPatty = 2;
+  }
+  required State state = 1;
+}

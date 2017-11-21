@@ -1,0 +1,36 @@
+<skeleton name="battle_result_star" frameRate="30" version="2.2">
+ <armatures>
+  <armature name="ws_dh_xx_mc">
+   <b name="图层 1" x="-1.3" y="108.4" kX="0" kY="0" cX="2.39" cY="2.39" pX="0" pY="0" z="0">
+    <d name="ws_dh_yj1" pX="73.6" pY="75.7"/>
+   </b>
+  </armature>
+ </armatures>
+ <animations>
+  <animation name="ws_dh_xx_mc">
+   <mov name="default" dr="16" to="6" drTW="16" lp="0" twE="NaN">
+    <b name="图层 1" sc="1" dl="0">
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="2.39" cY="2.39" pX="0" pY="0" z="0" dI="0" twE="-1" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="2.38" cY="2.38" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.25" y="108.35" cocos2d_x="-1.25" cocos2d_y="108.35" kX="0" kY="0" cX="2.34" cY="2.34" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="2.27" cY="2.27" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="2.17" cY="2.17" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.35" cocos2d_x="-1.3" cocos2d_y="108.35" kX="0" kY="0" cX="2.04" cY="2.04" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="1.89" cY="1.89" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="1.71" cY="1.71" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.25" y="108.4" cocos2d_x="-1.25" cocos2d_y="108.4" kX="0" kY="0" cX="1.5" cY="1.5" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="1.26" cY="1.26" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0" dI="0" twE="-1" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="0.98" cY="0.98" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="0.91" cY="0.91" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="0.97" cY="0.97" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="1.03" cY="1.03" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+     <f x="-1.3" y="108.4" cocos2d_x="-1.3" cocos2d_y="108.4" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0" dI="0" twE="0" dr="1"/>
+    </b>
+   </mov>
+  </animation>
+ </animations>
+ <TextureAtlas name="battle_result_star" width="256" height="256">
+  <SubTexture name="ws_dh_yj1" width="148" height="152" cocos2d_pX="73.6" cocos2d_pY="75.7" x="0" y="0"/>
+ </TextureAtlas>
+</skeleton>

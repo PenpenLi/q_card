@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+message InnerPlayerQuit {
+  enum traits {
+    value = 18;
+  }
+  enum State {
+    Active = 0;
+    ForceByBack = 1;
+  }
+  required int64 session = 1;
+  optional int32 id = 2;
+  required State state = 3;
+  optional bool need_remove = 4;
+
+}

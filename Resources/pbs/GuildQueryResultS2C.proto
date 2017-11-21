@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+import"GuildSync.proto";
+import"GuildBase.proto";
+message GuildQueryResultS2C{
+	enum traits{value = 5194;}
+	repeated GuildBase guildlist = 1;
+	optional bool flag = 2;
+	optional GuildSync guild = 3;
+	repeated int32 apply_guild = 4;
+}

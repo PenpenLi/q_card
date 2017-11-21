@@ -1,0 +1,166 @@
+每个消息的具体内容及其注释，请参考具体的文件
+总的来说，客户端发送请求 MSG, 服务器会返回一个 MSGResult， 其中包含一个state的成员表明请求的结果。
+
+(1) PlayerBaseInformation.proto
+当玩家登陆或者是创建新账号收到成功消息后的时候收到，收到此包后可以进行客户端初始化.
+(2) SyncTimer.proto
+同步客户端和服务器时间, 会在PlayerBaseInformation之前发送
+（3） PlayerForsaleLimitState
+服务器通知客户端当前在典藏商品中的状态
+（4） MaketTables
+服务器通知当前商场的列表
+
+功能：
+  绑定玩家的昵称
+客户端发送 BindGameNickName 消息 BindGameNickName.proto
+服务器返回 BindGameNickNameResult 消息, BindGameNickNameResult.proto
+
+  使用民心抽卡
+客户端发送 DrawCardUseLoyalty 消息， DrawCardUseLoyalty.proto
+服务器返回 DrawCardUseLoyaltyResult 消息， DrawCardUseLoyaltyResult.proto
+
+  使用道具抽卡
+客户端发送 DrawCardUseItem 消息， DrawCardUseItem.proto
+服务器返回 DrawCardUseItemResult 消息
+
+  卡片上阵
+客户端发送 GoIntoBattle 消息， GoIntoBattle.proto
+服务器返回 GoIntoBattleResult 消息， GoIntoBattleResult.proto
+
+  卡片下阵
+客户端发送 GoDownFromBattle 消息， GoDownFromBattle.proto
+服务器返回 GoDownFromBattleResult 消息， GoDownFromBattleResult.proto
+
+更换主将卡
+客户端发送 ResetMasterCard 消息， ResetMasterCard.proto
+服务器返回 ResetMasterCardResult 消息，ResetMasterCardResult.proto
+
+装备装备到卡片
+客户端发送 AssemebleEquipmentToCard， AssemebleEquipmentToCard.proto
+服务器端返回 AssemebleEquipmentToCardResult 消息， AssemebleEquipmentToCardResult.proto
+
+从卡上卸载装备
+发送 RemoveEquipmentFromCard ， RemoveEquipmentFromCard.proto
+返回 RemoveEquipmentFromCardResult, RemoveEquipmentFromCardResult.proto
+
+快速更换卡牌
+发送 QuickExhangeCard , QuickExhangeCard.proto
+返回 QuickExhangeCardResult, QuickExhangeCardResult.proto
+
+装备铸造装备
+发送 EquipmentCombineToEquipment, EquipmentCombineToEquipment.proto
+返回 EquipmentCombineToEquipmentResult , EquipmentCombineToEquipmentResult.proto
+
+熔炼卡牌
+发送 SmeltCard , SmeltCard.proto
+返回 SmeltCardResult , SmeltCardResult.proto
+
+
+
+卡牌升星
+发送 CardTurnback , CardTurnback.proto
+返回 CardTurnbackResult, CardTurnbackResult.proto
+
+道具合成装备
+发送 ItemCombineToEquipment ， ItemCombineToEquipment.proto
+返回 ItemCombineToEquipmentResult , ItemCombineToEquipmentResult.proto
+
+道具合成道具
+发送 ItemCombineToItem , ItemCombineToItem.proto
+返回 ItemCombineToItemResult , ItemCombineToItemResult.proto
+
+出售卡牌到系统
+发送 SellCardToSystem , SellCardToSystem.proto
+返回 SellCardToSystemResult , SellCardToSystemResult.proto
+
+出售装备到系统
+发送 SellEquipmentToSystem , SellEquipmentToSystem.proto
+返回 SellEquipmentToSystemResult , SellEquipmentToSystemResult.proto
+
+出售道具到系统
+发送 SellItemToSystem, SellItemToSystem.proto
+返回 SellItemToSystemResult , SellItemToSystemResult.proto
+
+使用道具恢复精神力
+发送 UsePosionToRecoverSpirit , UsePosionToRecoverSpirit.proto
+返回 UsePosionToRecoverSpiritResult , UsePosionToRecoverSpiritResult.proto
+
+使用道具恢复令牌
+发送 UseDragonCommandToRecoverCommand , UseDragonCommandToRecoverCommand.proto
+返回 UseDragonCommandToRecoverCommandResult , UseDragonCommandToRecoverCommandResult.proto
+
+
+吃卡功能
+客户端发送 EatCard, EatCard.proto
+服务器返回 EatCardResult, EatCardResult.proto
+
+购买商品（典藏模式）
+购买道具 
+发送 BuyItemFromShop, BuyItemFromShop.proto
+接收 BuyItemFromShopResult, BuyItemFromShopResult.proto
+购买装备
+发送 BuyEquipmentFromShop, BuyEquipmentFromShop.proto
+接收 BuyEquipmentFromShopResult, BuyEquipmentFromShopResult.proto
+购买卡牌
+发送 BuyCardFromShop, BuyCardFromShop.proto
+接收 BuyCardFromShopResult, BuyCardFromShopResult.proto
+
+购买物品（特惠模式）
+道具
+发送 BuyItemFromForSale BuyItemFromForSale.proto
+接收 BuyItemFromForSaleResult BuyItemFromForSaleResult.proto
+装备
+发送 BuyEquipmentFromForSale BuyEquipmentFromShop.proto
+接收 BuyEquipmentFromForSaleResult BuyEquipmentFromForSaleResult.proto
+卡牌
+发送 BuyCardFromForSale BuyCardFromForSale.proto
+接收 BuyCardFromForSaleResult BuyCardFromForSaleResult.proto
+
+
+商城购买（Market模式）
+购买商品
+发送 BuyObjectFromSale BuyObjectFromSale.proto
+接收 BuyObjectFromSaleResult BuyObjectFromSaleResult.proto
+服务器推送 PlayerMarketState 消息 PlayerMarketState.proto
+客户端主动刷新列表 
+发送 UseMoneyToRefreshMarket , UseMoneyToRefreshMarket.proto
+返回 UseMoneyToRefreshMarketResult , UseMoneyToRefreshMarketResult.proto
+
+
+开背包格子
+发送 OpenItemCell , OpenItemCell.proto
+接收 OpenItemCellResult  , OpenItemCellResult.proto
+
+查询高阶抽卡结果
+发送 AskForDrawTenCardInformation , AskForDrawTenCardInformation.proto
+有更新则
+接收 AskForDrawTenCardInformationResult , AskForDrawTenCardInformationResult.proto
+否则 没有任何消息
+
+开启箱子
+发送 OpenBox , OpenBox.proto
+接收 OpenBoxResult , OpenBoxResult.proto
+
+在线礼包
+发送 AskForOnlineReward , AskForOnlineReward.proto
+接收 AskForOnlineRewardResult, AskForOnlineRewardResult.proto
+
+犒赏三军
+询问状态
+发送 AskForCanEatPatty , AskForCanEatPatty.proto
+返回 AskForCanEatPattyResult , AskForCanEatPatty.proto
+具体的吃包子
+发送 EatPatty , EatPatty.proto
+返回 EatPattyResult, EatPattyResult.proto
+
+升级领奖
+发送 AskForLevelReward , AskForLevelReward.proto
+返回 AskForLevelRewardResult, AskForLevelRewardResult.proto
+
+DEBUG GM
+GMAddMoney
+GMAddCoin
+GMAddLoyalty
+GMAddExp
+GMGenerateRandomEquipment
+GMGenerateRandomItem

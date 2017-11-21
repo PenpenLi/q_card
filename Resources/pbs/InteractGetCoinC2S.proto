@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message InteractGetCoinC2S{
+   enum traits{value = 5075;}
+}

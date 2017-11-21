@@ -1,0 +1,17 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message EquipXiLianResult {
+  enum traits { value = 10048;}
+  enum State {
+    Ok = 0;
+    NoSuchEquip = 1;		//没有该装备
+    NeedMoreItem = 2;		//需要更多的材料
+    NotEnoughCurrency = 3;	//没有足够的金钱
+    NoSuchConfigId = 4;		//没有找到配置
+	CanNotAllLocked = 5;    //不能所有的属性都锁定，至少要留一个随机属性来洗练
+	CanNotXiLian = 6;  		//该装备不能洗练（没有随机属性）
+	PropIndexError = 7;     //属性INDEX错误 
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

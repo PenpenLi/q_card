@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message PVPFightCardPosBS2CS{
+  enum traits{
+    value = 5027;
+  }
+  repeated FightCardPosition cards = 2;
+}

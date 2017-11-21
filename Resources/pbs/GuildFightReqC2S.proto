@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message GuildFightReqC2S{
+  enum traits{ value = 5187 ; }
+  required FightCards cards = 1;
+}
+

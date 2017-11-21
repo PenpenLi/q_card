@@ -1,0 +1,13 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqUseQuickMoneyResult{
+   enum traits {value = 10105;}
+   enum State{
+	  NotEnoughMoney = 1;	//没有足够的元宝
+	  ActivityNotOpen = 2;
+	  ConfigError = 3;
+	  Success = 4;
+   }
+   required State state = 1;
+   optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message QuickFightInstanceResultS2C{
+  enum traits{value = 5083;}
+  enum ErrorCode{
+    NO_ERROR_CODE = 0;
+    STAGE_NOT_PASS = 1;
+    NEED_MORE_SPIRIT = 2;
+    NOT_VIP = 4;
+    NOR_STAGE_INSTANCE = 5;
+    SYSTEM_ERROR = 3;
+	DAILY_LIMIT = 6;
+	QUICK_ITEM_LIMIT = 7;
+  } 
+
+  required ErrorCode    error = 3;
+  required uint32       instance = 1;
+  repeated ClientSync   client = 2;
+}

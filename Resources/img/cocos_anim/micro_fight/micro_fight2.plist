@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>micro_fight_brush.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{512,478}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,17},{512,478}}</string>
+                <key>sourceSize</key>
+                <string>{512,512}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>micro_fight2.png</string>
+            <key>size</key>
+            <string>{512,1024}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:c63eb68cd37283a176c2ade6a5c16c5c:3/3$</string>
+            <key>textureFileName</key>
+            <string>micro_fight2.png</string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "PlayerPVPBaseInfo.proto";
+message PVPQueryRankResultS2C{
+  enum traits{ value = 5045;}
+
+  repeated PVPBaseData rank = 1;         //最强王者榜
+  repeated PVPBaseData keepWinRank = 2;  //连胜榜
+}

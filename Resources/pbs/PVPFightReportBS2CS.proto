@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+import "PlayerPVPBaseInfo.proto";
+message PVPFightReportBS2CS{
+  enum traits{
+    value = 5026;
+  }
+
+  required PVPServerReport report = 1;
+}

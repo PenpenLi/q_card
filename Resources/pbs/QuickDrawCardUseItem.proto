@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message QuickDrawCardUseItem {
+  enum traits { value = 10020;}
+  required int32 config_id = 1;
+  required int32 cell_id = 2;
+}

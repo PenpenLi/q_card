@@ -1,0 +1,13 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqForcibleBuyStageResult{
+ enum traits { value = 9905;}
+ enum eresult{
+  success = 1;
+  money_limit = 2;
+  daily_times_limit = 3;
+ }
+ repeated int32 stage_id = 1;
+ required eresult result = 2;
+ optional ClientSync client_sync = 3;
+}

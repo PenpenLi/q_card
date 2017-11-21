@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message AskForMonthRegisterStateResult {
+  enum traits { value = 3336;}
+  required int32 month_information = 1;
+  required int32 month_reward = 2;
+}

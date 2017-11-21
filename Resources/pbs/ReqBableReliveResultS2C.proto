@@ -1,0 +1,12 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqBableReliveResultS2C{
+   enum traits {value = 10093;}
+   enum State{
+	  ConfigError = 1;
+	  NoItemAndNoMoney = 2;		//没有元宝也没有重生道具
+	  Success = 3;
+   }
+   required State state = 1;
+   optional ClientSync client_sync = 2;
+}

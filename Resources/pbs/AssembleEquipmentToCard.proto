@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message AssembleEquipmentToCard {
+  enum traits { value = 3471;}
+  required int32 card_id = 1;
+  required int32 equipment_id = 2;
+}

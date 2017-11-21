@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+
+//请求战斗数据
+message FightReqBS2FS{
+  enum traits {
+    value = 5014;
+  }
+  required int32 id = 1;
+  optional string name = 5;
+  required FightMap map = 2;
+  required PlayerFightBaseData attacker = 3;
+  optional PlayerFightBaseData target = 4;
+  optional MonsterFightBaseData monster = 6;
+}

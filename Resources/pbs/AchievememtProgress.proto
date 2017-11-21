@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message AchievementProgress {
+ enum AchieveType{
+  type_normal = 1;
+  type_vip = 2;
+  type_none = 3;
+ }
+ required int32 type = 1;
+ required int32 config_id = 2;
+ required int32 var = 3;
+}

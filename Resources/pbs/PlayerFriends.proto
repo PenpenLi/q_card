@@ -1,0 +1,84 @@
+package DianShiTech.Protocal;
+import"VipState.proto";
+//关系元数据
+message FriendHelpSimpleInfo{
+  optional int32 card_config_id = 1;
+  optional int32 card_level = 2;
+}
+message RelationData{
+
+  enum MDOperator{
+    op_init = 0;
+    op_add = 1;
+    op_update = 2;
+    op_remove = 3;
+  }
+
+  optional int32  id = 1;
+  optional string name = 2;
+  optional int32  level = 3;
+  optional int32  avatar = 4;
+  optional bool   is_on_line=5;
+ 
+  optional int32  vip_level = 6;         //VIP
+  	
+  optional int32  minerIdlePos = 7;   //空闲的矿场位置
+  optional int32  minerPosCount = 8;  // 总计矿场位置 
+  optional int32  last_logout_time = 9; // 最后一次登录时间
+  
+  optional int32 fight_value = 10; //战斗力
+  optional int32 vip_exp = 11;	//vip exp	
+  optional FriendHelpSimpleInfo help_info = 12;
+}
+//单个附件数据
+message AdjunctData{
+
+    //附件类型
+    enum AdjunctType{
+      ADJ_CARD          = 1;  // 卡
+      ADJ_MONEY         = 2;  // 钱
+      ADJ_COIN          = 3;  // 金币
+      ADJ_ITEM          = 4;  // 道具
+      ADJ_EQUIPMENT     = 5;  // 装备
+	  ADJ_LOYALTY       = 6;  // 民心
+	  ADJ_RANK_POINT    = 7;  // 排行点
+	  ADJ_GUILD_POINT   = 8;  // 公会点数
+	  ADJ_BABLE_POINT   = 9;  // 通天塔点数
+	  ADJ_JIANGHUN      = 10; // 将魂
+    }
+
+    required int32 configId = 1;
+    required int32 count = 2;
+    required AdjunctType  type = 3;
+    required int32 id = 4;
+}
+//一组关系数据
+message MDRelations{
+  repeated RelationData data = 1;
+}
+//邮件
+message MailData{
+  enum MailCoentLen{
+    max_title_len = 100;
+    max_content_len = 1000;
+  }
+  //附件列表
+  message MailAdjunct{
+    repeated AdjunctData  adjuncts = 1;
+  }
+  optional uint32 id = 1;
+  optional int32 sender = 2;
+  optional int32 reciver = 3;
+  optional string content = 4;
+  optional string title = 8; // new 
+  optional uint32 flag = 5;
+  optional uint32 time = 7; // new 
+  optional MailAdjunct adjuncts = 6; // new
+}
+//一组邮件列表
+message MailList{
+  enum MailMaxCount{
+    max_mail_count = 512;
+  }
+  repeated MailData data= 1;
+}

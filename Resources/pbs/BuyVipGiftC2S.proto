@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message BuyVipGiftC2S{
+	enum traits {value = 5153;}
+	optional int32 vip_level = 1;
+}

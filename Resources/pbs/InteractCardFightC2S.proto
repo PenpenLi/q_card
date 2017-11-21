@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+message InteractCardFightC2S{
+  enum traits {value =5067;}
+  required int32 card       = 1;
+  required int32 target     = 2;
+  required int32 target_pos = 3;
+  required int32 duration = 4;
+}

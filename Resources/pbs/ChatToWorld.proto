@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message ChatToWorld {
+  enum traits { value = 3011;}
+  required int32 from_player = 1;
+  optional bytes dialog = 2;
+}

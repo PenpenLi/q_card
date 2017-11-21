@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message InteractChangeCardC2S{
+  enum traits{ value = 5062;}
+  required int32 card = 1;
+  required int32 target = 2;
+}

@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+message BindGameNickNameResult {
+  enum traits { value = 1034;}
+  enum State {
+    Ok = 0;
+    NameHasErrorCode = 1;
+    NameIsTooLong = 2;
+    NameConflictWithOther = 3;
+    NoRightToChangeNickName = 4;
+    NameIsTooShort = 5;
+    NameNotValid = 6;
+  }
+  required State state = 1;
+  optional bytes nick_name = 2;
+}

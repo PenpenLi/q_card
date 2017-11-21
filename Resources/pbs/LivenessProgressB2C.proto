@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+message LivenessProgressB2C{
+  enum traits { value = 10035;}
+  required int32 type = 1;
+  required int32 var_before = 2;
+  required int32 var_after = 3;
+  required int32 point = 4;
+  required int32 week_point = 5;
+}

@@ -1,0 +1,21 @@
+package DianShiTech.Protocal;
+import "SyncCommon.proto";
+import "PlayerPVPBaseInfo.proto";
+import "VipState.proto";
+import "PlayerFightBaseData.proto";
+import "BattleFormation.proto";
+message QueryPlayerShowResultS2C{
+  enum traits {value = 5089;}
+  message BattleCardsInfo{
+	optional FightCards cards = 1;					//卡牌信息
+	optional BattleFormation.BattleIndex index = 2;	//
+  };
+  required bool result = 7;
+  optional int32 id = 1;
+  optional string nick_name = 2;		//昵称
+  optional BaseSync common = 3;			//基础信息
+  optional PVPBaseData pvpbase = 4;		//征战信息
+  optional int32 achievement_point = 5;	//成就点
+  optional VipState vip_state = 6;		//包月卡
+  repeated BattleCardsInfo info = 8;	//阵容信息
+}

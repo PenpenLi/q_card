@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message PVPArenaSearchC2S{
+	enum traits{value = 5129;}
+	optional bool cancel = 1; // ÊÇ·ñÈ¡ÏûËÑË÷
+}

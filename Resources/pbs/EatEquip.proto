@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+
+message EatEquip {
+  enum traits { value = 10042;}
+  message ItemCost {
+    required int32 id = 1;
+    optional int32 count = 2;
+  }
+  required int32 beneficiary = 1;
+  repeated ItemCost cost_info= 2;
+}

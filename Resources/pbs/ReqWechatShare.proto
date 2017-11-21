@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message ReqWechatShare {
+  enum traits { value = 10061;}
+}

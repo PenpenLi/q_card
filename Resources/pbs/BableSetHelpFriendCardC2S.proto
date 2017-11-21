@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message BableSetHelpFriendCardC2S{
+  enum traits {
+    value = 10096;
+  }
+  optional int32 card_id = 1;
+}

@@ -1,0 +1,6 @@
+import "InnerLoginResult.proto";
+import "PlayerBaseInformation.proto";
+package DianShiTech.Protocal;
+extend InnerLoginResult {
+  optional PlayerBaseInformation Login_PlayerBase = 1000;
+}

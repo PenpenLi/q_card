@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+message SaveBattlePosition {
+  enum traits { value = 4473;}
+  message Information {
+    required int32 card_id = 1;
+    required int32 position = 2;
+  }
+  repeated Information card = 1;
+}

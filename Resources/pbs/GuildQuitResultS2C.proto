@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import"GuildSync.proto";
+message GuildQuitResultS2C{
+	enum traits{value = 5196;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		CHAIRMAN_NOT_ALLOW = 2;		//会长不允许退会
+		NOT_HAS_GUILD = 3;		//没有公会
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+}

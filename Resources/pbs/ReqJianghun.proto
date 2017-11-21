@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message ReqJianghun{
+  enum traits { value = 10055;}
+  message ItemInfo{
+	required int32 id = 1;
+	required int32 count = 2;
+  }
+  repeated ItemInfo item_id = 1;
+  repeated int32 card_id = 2;
+}

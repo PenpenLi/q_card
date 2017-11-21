@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+message PlatformOrder{
+
+  enum OrderState{
+    OrderExecute = 1;
+    OrderClose = 2;
+  };
+  required string order = 1;
+  required int32  commodity = 2;
+  required int32  player = 3;
+  required OrderState state = 4;
+  optional int32 time = 5;
+  
+  optional int32 count = 6;
+  optional int32 point = 7;
+  optional int32 first_point = 8;
+  optional int32 type = 9;
+  optional int32 vip_exp = 10;
+}

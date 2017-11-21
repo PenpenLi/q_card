@@ -1,0 +1,8 @@
+import "PlayerFriends.proto";
+package DianShiTech.Protocal;
+message MsgC2SMailToFriend{
+  enum trauts{
+    value = 5008;
+  }
+  optional MailData mail = 1;
+}

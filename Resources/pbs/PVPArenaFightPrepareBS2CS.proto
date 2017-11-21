@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message PVPArenaFightPrepareBS2CS{
+	enum traits{value = 5136;}
+	required PlayerFightBaseData data = 1;
+}

@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message EatPatty {
+  enum traits { value = 3211;}
+}

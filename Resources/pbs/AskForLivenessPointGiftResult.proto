@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message AskForLivenessPointGiftResult {
+  enum traits {
+    value = 10037;
+  }
+  enum State {
+    Ok = 0;
+    HasReceived = 1;
+    NeedPoint = 2;
+  }
+  required State state = 1;
+  required int32 award_id = 2;
+  optional ClientSync client_sync = 3;
+}

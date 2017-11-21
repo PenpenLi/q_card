@@ -1,0 +1,27 @@
+package DianShiTech.Protocal;
+message StoreItem{
+	optional int32 id = 1;						//针对单个玩家的存贮ID（区分两个同样的商品） 购买消息发送这个ID
+	optional int32 store_type = 2;				//对应商店类型 1-集市 2-特惠 3-典藏 4-VIP 5--将魂
+	optional int32 vip_buy_lv = 3;				//购买需要的VIP等级
+	optional int32 buy_daily_limit = 4;			//默认的购买次数
+	optional int32 vip_limit_add = 5;			//VIP增加的购买次数
+	optional int32 vip_show_lv = 6;				//显示需要的VIP等级
+	optional int32 item_drop = 7;				//掉落包ID
+	optional int32 show_price = 8;				//显示的价格
+	optional int32 show_currency_type = 9;		//显示的价格类型
+	optional int32 buy_price = 10;				//购买的价格
+	optional int32 buy_currency_type = 11;		//购买的价格类型
+	optional int32 add_cost = 12;				//该道具连续购买时价格的变化，若该道具出售价格没有增张则填写0，反之填写有效的COST_type_id
+	optional int32 weight = 13;					//权重
+	optional int32 config_id = 14;				//商品id 
+	optional int32 min_level = 15;				//最低要求等级
+	optional int32 max_level = 16;				//最高等级要求
+}
+message StoreInformation{
+	repeated StoreItem items = 1;	//当前商品列表信息
+	optional int32 type = 2; 	//商店类型 STORE_ALL 代表所有类型
+}
+//玩家商店数据
+message PlayerStore{
+  repeated StoreInformation store = 1;
+}

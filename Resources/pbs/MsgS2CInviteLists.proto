@@ -1,0 +1,10 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//…Í«Î∫√”—¡–±Ì
+message MsgS2CInviteLists{
+  enum trauts{
+    value = 5002;
+  }
+  required MDRelations relations = 1;
+}

@@ -1,0 +1,16 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message UpdateCardSkillExperienceResult {
+  enum traits { value = 4462;}
+  enum State {
+    Ok = 0;
+    NoSuchCardId = 1;
+    NoSuchItem = 2;
+    WrongItemType = 3;
+    SkillCouldNotGrowup = 4;
+    NeedMoreItem = 5;
+    NeedMoreCoin = 6;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

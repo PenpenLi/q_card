@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message LoginVersionChangeS2C {
+  enum traits {
+    value = 5107;
+  }
+  optional string version = 1;
+}

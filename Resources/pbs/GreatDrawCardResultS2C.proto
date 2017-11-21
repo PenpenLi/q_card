@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message GreatDrawCardResultS2C{
+	enum traits{ value = 5212;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1; //
+		NOT_FOUND_CONFIG = 2; //没有找到配置
+		NEED_MORE_MONEY = 3; //钱不够
+		FREE_IN_CD_TIME = 4; //免费抽卡在CD时间
+		SYSTEM_ERROR = 99; // 系统错误
+	}
+	required ErrorCode error = 1;		//错误码
+	optional ClientSync client = 2;		//反馈
+	repeated int32 cards = 3;			//掉落卡的列表
+}

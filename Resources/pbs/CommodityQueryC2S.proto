@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import"Commodity.proto";
+message CommodityQueryC2S{
+  enum traits{value = 5098;}
+  required string channel = 1; //«˛µ¿¿‡–Õ
+}

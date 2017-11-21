@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message EquipTurnExclusiveResult{
+  enum traits { value = 10060;}
+  enum Result{
+    Ok = 0;
+    NoSuchEquip = 1;		//没有该装备
+	NotEquiped = 2;			//装备没有装备到卡牌上不允许执行该操作
+	ConfigError = 3;		//装备升级表里没有该等级段的配置
+	IsAlreadyExclusive = 4; //已经是这张卡牌的专属，不可再转
+  }
+  required int32 equip_id = 1;
+  required Result state = 2;
+  optional ClientSync client_sync = 3;
+}

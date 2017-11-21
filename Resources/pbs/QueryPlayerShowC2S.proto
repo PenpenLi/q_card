@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message QueryPlayerShowC2S{
+  enum traits {value = 5088;}
+  required int32 pid = 1;
+}

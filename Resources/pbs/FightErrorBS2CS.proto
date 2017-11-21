@@ -1,0 +1,49 @@
+import "PlayerFightBaseData.proto";
+package DianShiTech.Protocal;
+message FightErrorBS2CS{
+  enum traits{
+    value = 5016;
+  }
+  enum FightReqError{
+    NO_ERROR_CODE = 0;
+    CARD_NOT_FOUND= 1;
+    CARD_NOT_ACTIVE = 2;
+    CARD_EQUIP_NOT_FOUND = 3;
+    CARD_EQUIP_ERROR = 4;
+    TARGET_DATA_ERROR = 5;
+    STAGE_NOT_FOUND = 6;
+    LEVEL_NOT_ALLOW = 7;
+    PRE_STAGE_NOT_COMPLETE = 8;
+    NEED_MORE_SPIRIT = 9;
+    SYSTEM_ERROR = 10;
+    NOT_COMPLETE_STAR = 11;
+    STAGE_CLOSE = 12;
+    STAGE_TIME_CLOSE = 13;
+    STAGE_NEED_MORE_CHANCE = 14;
+    NOT_FOUND_PVP_TARGET = 15;
+    SYSTEM_LOADING_DATA = 16;
+    NOT_BOSS_STAGE = 17;
+    IS_IN_CD_TIME = 18;
+    BOSS_IS_DEAD = 19;
+    NEED_MORE_TOKEN = 20;
+    CARD_POS_ERROR = 21;
+    NOT_RANK_TARGET = 22;
+	ACTIVITY_STAGE_NOT_OPEN = 23;
+	ENTER_CD = 24;
+	PVP_TARGET_PROTECT = 25;
+	
+	RANK_MATCH_CD_TIME = 26;
+	RANK_MATCH_NEED_CHANCE = 27;
+	LEADER_DATA_ERROR = 28;
+	
+	NOT_HAS_GUILD = 29;
+	GUILD_INSTANCE_CLOSE = 30;
+	FRIEND_ALREADY_HELP = 31;
+	LEADER_POWER_LIMIT = 32;
+	NOT_HAVE_SELF_CARD = 33;
+	SAME_CARD_IN_BATTLE = 34;
+	HP_IS_EMPTY = 35;		
+  }
+  required FightReqError  error = 1;
+  optional FightMapInfo   info = 2;
+}

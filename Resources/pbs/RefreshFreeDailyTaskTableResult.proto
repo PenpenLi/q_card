@@ -1,0 +1,11 @@
+import "DailyTaskTable.proto";
+package DianShiTech.Protocal;
+message RefreshFreeDailyTaskTableResult {
+  enum traits { value = 4426;}
+  enum State {
+    Ok = 0;
+    TimeLimit = 1;
+  }
+  required State state = 1;
+  optional DailyTaskTable table = 2;
+}

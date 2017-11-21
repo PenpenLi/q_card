@@ -1,0 +1,35 @@
+class CCHttpRequest : CCObject
+{
+  typedef enum
+  {
+    kHttpGet,
+    kHttpPost,
+    kHttpPut,
+    kHttpDelete,
+    kHttpUnkown,
+  } HttpRequestType;
+ 
+ 
+  void setRequestType(HttpRequestType type);
+
+
+  HttpRequestType getRequestType();
+ 
+  void setUrl(const char* url);
+
+
+  const char* getUrl();
+ 
+  void setRequestData(const char* buffer, unsigned int len);
+
+
+  char* getRequestData();
+
+
+  int getRequestDataSize();
+ 
+  void setTag(const char* tag);
+
+
+  const char* getTag();
+};

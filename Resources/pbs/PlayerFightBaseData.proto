@@ -1,0 +1,89 @@
+import "CommanderCardGroup.proto";
+import "Item.proto";
+import "Equipment.proto";
+package DianShiTech.Protocal;
+
+enum CardOwnerType{
+   _MONSTER_CARD_ = 0; // 怪物牌
+   _SELF_CARD_ = 1;		//玩家自己的牌
+   _FRIEND_CARD_ = 2;	//好友卡牌
+};
+//上阵阵型
+message FightCardData{
+  required CommanderCard card = 1;
+  repeated Equipment equip = 3;
+  required int32 pos = 2;
+  optional CardOwnerType owner_type = 4 [default=_SELF_CARD_];
+}
+message FightCardPosition{
+  required int32 card = 1;
+  required int32 pos = 2;
+  optional int32 config = 3;
+  optional int32 monster = 4;
+  optional int32 level = 5;
+  optional int32 leader = 7;
+  optional int32 hpper = 8; 
+  optional CardOwnerType owner_type = 9 [default=_SELF_CARD_];
+  repeated Equipment equip = 6;
+}
+message FightCards{
+  repeated FightCardPosition card_pos = 1;
+}
+enum FightType{
+  PVE_NORMAL = 0;  			//副本
+  PVP_NORMAL = 1;			//征战
+  PVE_BOSS   = 2;			//BOSS战
+  PVE_ACTIVITY = 3;			//活动副本
+  PVP_REAL_TIME = 4; 		//PVP实时战斗
+  PVP_RANK_MATCH = 5;		//竞技场
+  PVE_GUILD = 6;			//公会副本
+  PVE_BABLE = 7;			//通天塔副本
+}
+message FightMapFields{
+  required int32 index = 1;
+  required int32 type = 2 ;
+}
+message FightMapInfo{
+  repeated FightMapFields fields = 3;
+  repeated FightCardPosition target = 4;
+  repeated int32 talent_skill = 5;			//天赋技能列表
+  required FightType  fightType = 1;
+  optional int32 mapId = 2;
+  optional int32 wall_hpper = 6;
+}
+
+message FightMap{
+  required int32 map = 1;
+  required int32 level = 2;
+  required FightType  fightType = 3;
+  optional int32 boss = 4;
+  optional int32 guild = 5;
+  optional int32 hpper = 6;
+  optional int32 activity = 7; 
+}
+
+//玩家战斗的基础数据，需要通过这个数据计算出玩家的战斗属性
+message PlayerFightBaseData{
+  required int32 id = 1;
+  required int32 level = 2;
+  repeated FightCardData active_card = 3; 	//上阵卡牌
+  //repeated Equipment active_equip = 4;    	//上阵卡牌装备
+  repeated int32 talent_skill = 5;			//天赋技能列表
+  repeated int32 fight_skill = 6;			//附带的其他技能效果
+  optional int32 wall_hpper = 7;
+}
+message FightMonster{
+ optional int32 monster = 1;
+ optional int32 hpper = 2;
+}
+message MonsterFightBaseData{
+ optional int32 wall_hpper = 1;
+ repeated FightMonster monster = 2;
+ repeated int32 fight_skill = 3;
+}
+message PlayerFightPVPData{
+  required int32 id = 1;
+  required FightMap map = 2;
+  required PlayerFightBaseData target = 3;
+  optional int32 target_type = 4; //是否是挑战 0 普通 1 挑战 2 复仇
+}

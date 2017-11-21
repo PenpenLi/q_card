@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message QuickFightInstanceC2S{
+  enum traits{value = 5082;}
+  required uint32 instance = 1;
+  required uint32 count = 2;
+  optional int32 item_id = 3;
+}

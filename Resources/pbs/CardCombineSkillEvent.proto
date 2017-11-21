@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+
+message CardCombineSkillEvent {
+  enum traits { value = 8109;}
+  repeated int32 cards = 1;
+  required int32 skill_id = 2;
+  required int32 group = 3;
+}

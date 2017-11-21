@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message AskForTaskState {
+  enum traits { value = 3753;}
+}

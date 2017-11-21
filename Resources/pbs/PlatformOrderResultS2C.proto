@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+import"Commodity.proto";
+message PlatformOrderResultS2C{
+  enum traits {value = 5096;}
+  required string order = 1;
+  required int32  commodity = 2;
+  required int32  money = 3;
+  required int32  point = 4;
+  required int32  firstPoint = 5;
+  required int32  vip = 8;
+  optional ClientSync client = 6;
+  optional CommodityData data = 7;
+  optional int32 vip_exp = 9;
+}

@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+
+message PVPQueryReportReview{
+  enum traits{
+    value = 10052;
+  }
+
+  required int32 review_id = 1;
+}

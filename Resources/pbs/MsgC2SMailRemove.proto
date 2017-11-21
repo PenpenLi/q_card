@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+//删除邮件
+message MsgC2SMailRemove{
+  enum trauts{
+    value = 5010;
+  }
+  optional int32 id = 1;
+}

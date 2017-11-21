@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+import "PlayerFriends.proto";
+import "ChatC2S.proto";
+message ChatS2C{
+	enum traits{value = 5192;}
+	optional RelationData sayer = 1;
+	optional string content = 2;
+	optional ChatC2S.Channel channel = 3;
+}

@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+
+message InnerForceOffline {
+  enum traits { value = 21;}
+  enum eresult{
+   NO_REASON = 1;
+   ACCOUNT_LOCK = 2;
+  }
+  required int32 id = 1;
+  optional int32 result = 2;
+}

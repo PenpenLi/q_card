@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message BableSetHelpFriendCardResultS2C{
+  enum traits {
+    value = 10097;
+  }
+  enum State{
+	ConfigError = 1;
+    CardNotFixCondition = 2;	//卡牌不符合要求 
+	SameCard = 3;				//跟上次设置的卡牌是同一张
+	Success = 4;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

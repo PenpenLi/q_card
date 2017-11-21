@@ -1,0 +1,21 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message TalentClearCDResultS2C{
+	enum traits{value = 5116;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;			//成功
+		NEED_MORE_MONEY = 2;		//需要更多元宝
+		NOT_FOUND_TALENT = 3;		//没有找到这个天赋
+		BANK_NOT_LEVEL_UP = 4;  	//银行没有在升级
+		TALENT_NOT_LEVEL_UP = 5;	//天赋没有在升级
+		SYSTEM_ERROR = 8;			//其他错误
+	}
+	enum CDType{ 
+		TALENT_BANK = 1; 	//清除银行CD
+		TALENT_SKILL = 2;	//清除技能CD
+	}
+	required ErrorCode error = 1;
+	optional ClientSync client = 2;
+	optional CDType type = 3;
+	optional int32 talent = 4;
+}

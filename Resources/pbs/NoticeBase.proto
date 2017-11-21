@@ -1,0 +1,24 @@
+package DianShiTech.Protocal;
+message NoticeParm{
+  enum ParmType{
+  // int 
+    item  = 1;
+    card  = 2;
+    equip = 3;
+    money = 4;
+    coin  = 5;
+    card_star = 7;
+    keep_win = 8;
+    boss_id = 9;
+    // string
+    name  = 6;
+  }
+  required ParmType type = 1;
+  optional int32    data = 2; // count or config id
+  optional string   str = 3;
+}
+
+message NoticeData{
+ required int32       id = 1;
+ repeated NoticeParm  data = 2;
+}

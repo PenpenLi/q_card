@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PlayerAwardRecord.proto";
+message QueryAwardC2S{
+	 enum traits { value = 5158;}
+	 optional int32 id = 1;
+	 required AwardRecord.AwardType type = 2;
+}

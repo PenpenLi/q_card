@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message DrawCardUseItem {
+  enum traits { value = 3343;}
+  required int32 config_id = 1;
+}

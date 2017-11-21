@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message AskForDrawTenCardInformation {
+  enum traits { value = 1773;}
+  optional int32 key = 1; // 0 or nothing means force refresh
+}

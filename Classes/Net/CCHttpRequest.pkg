@@ -1,0 +1,6 @@
+class CCHttpRequest : public CCObject
+{
+    void setUrl(const char* url)
+    const char* getUrl()
+};
+

@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+message LoginResult {
+  enum traits {
+    value = 1005;
+  }
+  enum State {
+    Ok = 0;
+    PlayerNotExist = 1;
+    PasswordError = 2;
+    HasLoginned = 3;
+    UseForceButNoLoginedPlayer = 4;
+    JustLoginning = 5;
+    ServerPlayerFull = 6;
+    PlayerLocked = 7;
+    ERROR_SIGN_CODE = 8;
+    ERROR_CLIENT_VERSION = 9;
+  }
+  required State state = 1;
+  optional int32 player_id = 2;
+}

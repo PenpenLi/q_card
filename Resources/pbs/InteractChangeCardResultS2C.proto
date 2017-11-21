@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "InteractPlayerBase.proto";
+
+message InteractChangeCardResultS2C{
+  enum traits {value = 5063;}
+  enum ErrorCode{
+    NO_ERROR_CODE  = 0 ;
+    NOT_FOUND_CARD = 1 ;
+    CARD_POS_FULL  = 2 ;
+	ERROR_CARD_POS = 3 ;
+	CARD_IS_ACTIVE = 4 ;
+	TARGET_CARD_WORKING = 5;
+	CARD_IS_WORKING = 7;
+    SYSTEM_ERROR   = 6 ;
+  }
+
+  required ErrorCode  error = 1;
+  optional InteractDataUpdate update = 2;
+}

@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message AskForSideTaskAward {
+  enum traits { value = 3577;}
+  required int32 id = 1; // config id
+}

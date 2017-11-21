@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+
+message EatCard {
+  enum traits { value = 1088;}
+  message CardExpItem{
+	required int32 id = 1;		//道具ID
+	required int32 count = 2;   //道具数量
+  }
+  required int32 card = 1;		   //要升级的卡牌
+  repeated CardExpItem items = 2;  //经验药水
+}

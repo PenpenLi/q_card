@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message AssembleEquipmentToCardResult {
+  enum traits { value = 3472;}
+  enum State {
+    Ok = 0;
+    NoSuchEquipment = 1;
+    NoSuchCard = 2;
+    EquipmentHasAssembled = 3;
+  }
+  required State state = 1;
+}

@@ -1,0 +1,18 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+import "StoreItem.proto";
+message PlayerRefreshStoreResultS2C{
+	enum traits {value = 5152;}
+	enum ErrorCode{
+		NO_ERROR_CODE 	= 1;
+		REFRESH_COUNT_MAX = 2;	//达到最大刷新次数
+		NEED_VIP_LEVEL 	= 4;	//VIP等级不足
+		NEED_MORE_MONEY	= 5;	//货币不足
+		STORE_CLOSED    = 6;	//商店已经关闭
+		MONET_FRESH_MAX = 7;
+		SYSTEM_ERROR 	= 100;
+	}
+	required ErrorCode  	error = 1;		
+	optional ClientSync 	client = 2;		
+	optional PlayerStore 	store = 3;
+}

@@ -1,0 +1,71 @@
+package DianShiTech.Protocal;
+message GuildBase{
+	required int32  guild_id = 1;			//公会ID
+	optional string guild_name = 2;			//公会名字
+	optional int32  guild_level = 3;		//公会等级
+	optional int32  guild_flag = 4;			//公会旗帜
+	optional string guild_notice = 5;		//公会宣言
+	optional int32  guild_exp = 6;			//公会经验
+	optional int32  guild_coin = 7;			//公会资金
+	optional int32  guild_money = 8;		//公会元宝
+	optional int32  guild_create = 9;		//创建时间
+	optional int32  guild_creater = 10;		//创建人
+	optional int32  guild_apply = 11;		//收人的等级
+}
+message GuildInstanceBase{
+	required int32 chepter = 1;				//副本章节
+	optional int32 current_stage = 2;		//副本进度
+	optional int32 close_time = 3;			//关闭时间
+	optional int32 bosshp = 4;				//boss hp
+}
+//副本战斗记录
+message GuildInstanceRecord{
+	message Record{
+		optional int32 player = 2;			//玩家ID
+		optional string name = 3;			//玩家名字
+		optional int32 damage = 4;			//伤害
+		optional int32 time = 5;			//时间
+		optional int32 kill = 6;			//击杀
+	}
+	optional int32 stage = 1;		//副本ID
+	repeated Record record = 2;		//副本记录
+}
+
+message GuildBuildBase{
+	repeated int32  build = 1;				//帮会建筑
+	optional int32  up = 2;					//正在升级建筑
+	optional int32  time = 3;				//升级时间
+	optional int32  power = 4;				//公会技能点 
+}
+message GuildMember{
+	enum GUILD_JOB{
+		CHAIRMAN  = 1;			//会长
+		VICE_CHAIRMAN = 2;		//副会长
+		ELITE = 3;				//精英
+		ORDINARY = 4;			//普通 
+	};
+	enum GUILD_AUTHORITY{
+		SET_VICE_CHAIRMAN = 1;		//设置副会长
+		SET_DECLARATION = 2;		//设置宣言
+		ACCEPT_PENDING = 3;			//接受会员
+		KICK_ORDINARY = 4;			//剔除会员
+		INVITE_PENDING = 5;			//邀请成员
+		BAN_CHAT = 6;				//禁言
+	};
+	required int32 player  = 1;				//玩家
+	required GUILD_JOB job = 2; 			//职位
+	optional int32 point = 3;				//贡献度 (总贡献度 当前贡献度在玩家身上)
+	optional int32 ban_chat = 4;			//禁言时间
+	optional int32 join_time = 5;			//加入公会时间
+	optional int32 donate_time = 6;			//上次捐献时间
+	optional int32 guild_id = 7;			//所在公会Id
+}
+message Guild{
+	required GuildBase guild = 1;			//公会
+	repeated int32 members = 2;				//成员
+	optional GuildInstanceBase stage = 3;	//副本
+	optional GuildBuildBase build = 4;		//建筑
+	repeated GuildInstanceRecord record = 7;//副本战斗记录
+	repeated int32 apply = 5;				//申请列表
+	optional uint32 flag = 6;				//更新标示
+}

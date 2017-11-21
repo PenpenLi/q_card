@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message GameServerInformationS2C{
+  enum traits {value = 5155;}
+  required uint32 server_begin_time = 1; //本服务器开服的时间
+  required string time_zone = 2;		 //本服务器时区代码 
+}

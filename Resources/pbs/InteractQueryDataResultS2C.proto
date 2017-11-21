@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "InteractPlayerBase.proto";
+message InteractQueryDataResultS2C{
+   enum traits {value =5061;}
+   required InteractData data = 1;
+}

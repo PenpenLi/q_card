@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import"GuildSync.proto";
+message GuildSyncS2C{
+	enum traits{value = 5199;}
+	optional GuildSync sync = 1;
+}

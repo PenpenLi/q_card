@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message TalentDataQueryC2S{
+	enum traits{value = 5117;}
+}

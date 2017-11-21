@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+import "PlayerFriends.proto";
+message RechargeMaxInfo{
+	enum traits{ value = 10068;}
+	optional int32 id = 1;					//第一名id
+	optional RelationData  data = 2;		//基础信息
+	optional int32 recharge_var = 3;		//充值金额
+	optional int32 get_like = 4;			//获得点赞数
+	optional int32 award_is_get = 5;        //当天奖励是否已经领取
+}

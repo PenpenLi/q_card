@@ -1,0 +1,10 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//推荐好友列表
+message MsgS2CRecommendLists{
+  enum trauts{
+    value = 5001;
+  }
+  required MDRelations relations = 1;
+}

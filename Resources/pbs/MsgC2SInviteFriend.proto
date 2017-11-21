@@ -1,0 +1,10 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//…Í«Îº”∫√”—
+message MsgC2SInviteFriend{
+  enum trauts{
+    value = 5004;
+  }
+  optional string name = 1 ;
+}

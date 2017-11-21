@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <plists>
+        <plist>jindutiao.plist</plist>
+    </plists>
+    <animations>
+        <animation>
+            <name>jindutiao</name>
+            <delay>0.1</delay>
+            <spriteFrame>jindutiao_0001.png</spriteFrame>
+            <spriteFrame>jindutiao_0002.png</spriteFrame>
+            <spriteFrame>jindutiao_0003.png</spriteFrame>
+        </animation>
+    </animations>
+    <sprites>
+        <sprite>jindutiao_0001.png</sprite>
+        <sprite>jindutiao_0002.png</sprite>
+        <sprite>jindutiao_0003.png</sprite>
+    </sprites>
+</root>

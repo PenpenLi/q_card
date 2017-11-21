@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message GuildMailC2S{
+	enum traits{value = 5190;}
+	optional string titile = 1;
+	optional string content = 2;
+}

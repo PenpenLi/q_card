@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "BossFightBase.proto";
+message BossQueryDataResultS2C{
+  enum traits {value = 5049;}
+  repeated BossFightInfo list = 1;
+}

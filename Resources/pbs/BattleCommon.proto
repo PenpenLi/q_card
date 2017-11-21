@@ -1,0 +1,75 @@
+package DianShiTech.Protocal;
+
+message BattleCommon {
+  required int32 attacker = 1;
+  required int32 skill_id = 2;
+  repeated int32 targets = 3;
+}
+
+enum PbFieldType {
+	Empty = 1;
+	Hill = 2;
+	Forest = 3;
+	Tower = 4;
+	Wall = 999;
+}
+enum PbFightResultType{
+	BlueGroupWin = 0;
+	RedGroupWin = 1;
+	TooMuchRound = 2;
+}
+enum PbEventType {
+	EventTypeMove = 0;
+	EventTypeAttack = 1;
+	EventTypeAlive = 2;
+	EventTypeWallBroken = 3;
+	EventTypeSkill = 4;
+	EventTypeSkillDamage = 5;
+	EventTypeChangeStatus = 6;
+	EventTypeDropItem = 7;
+	EventTypeTurn = 8;
+	EventTypeCombineSkill = 9;
+	EventTypeEffect = 10;
+	EventTypeChangeValue = 11;
+	EventTypeWallBeCure = 12;
+	EventTypeWallChangeValue = 13;
+	EventTypeWallAttack = 14;
+}
+
+enum AttackType{
+	AttackNormal = 0;
+	AttackMelee = 1;
+}
+enum DamageType{
+	DamageNormal = 0;
+	DamageMiss = 1;
+	DamageBlock = 2;
+	DamageCritical = 3;
+	DamageResist = 4;
+	DamageCure = 5;
+}
+enum TargetType{
+	TargetCard = 0;
+	TargetWall = 1;
+}
+  
+message CardEffect {
+	required int32 target = 1; 
+	required int32 skill_effect_id = 2;
+}
+
+message CardMove {
+	required int32 target = 1; 
+	required int32 from = 2;
+	required int32 to = 3;
+	optional int32 move_effect = 4;
+}
+
+message CardSkillDamage {
+	required int32 target = 1; 
+	required int32 damage_type = 2;
+	required int32 final_hp = 3; 
+	required int32 damage = 4;
+	optional bool is_attack_wall = 5;
+	optional int32 skill_id = 6;
+}

@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message FestivalGiftResultS2C{
+	enum traits{ value = 5143;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_OPEN = 2;
+		HAS_GET_GIFT = 3;
+		NOT_FOUND_GIFT = 5;
+		SYSTEM_ERROR = 4;
+	}
+  required ErrorCode error = 1;
+  optional ClientSync client = 2; 
+}

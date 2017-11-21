@@ -1,0 +1,14 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+
+message GoDownFromBattleResult {
+  enum traits { value = 1076;}
+  enum State {
+    Ok = 0;
+    NotValidActiveCard = 1;
+    MasterShouldNotDoDown = 2;
+    MustHasCardInBattle = 3;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

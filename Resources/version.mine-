@@ -1,0 +1,77 @@
+{
+    "version": "1.2.0.0",
+    "netConfig": [
+        {
+            "ip": "10.103.252.67",
+            "port": "89999",
+            "name": "67_tmp",
+            "status": "recommend",
+            "area": "2",
+			"serverId":"1001"
+        },	
+        {
+            "ip": "10.103.252.67",
+            "port": "49999",
+            "name": "67_branch",
+            "status": "recommend",
+            "area": "2",
+			"serverId":"1001"
+        },
+        {
+            "ip": "10.103.252.67",
+            "port": "9999",
+            "name": "67_truck",
+            "status": "recommend",
+            "area": "7",
+			"serverId":"1001"
+        },				
+		{
+            "ip": "10.103.252.98",
+            "port": "9999",
+            "name": "98 server",
+            "status": "idle",
+            "area": "1",
+			"serverId":"1001"
+        },		
+		{
+            "ip": "10.103.252.68",
+            "port": "10099",
+            "name": "District_3",
+            "status": "idle",
+            "area": "3",
+			"serverId":"1001"
+        },
+		{
+            "ip": "10.103.252.66",
+            "port": "9999",
+            "name": "qin_luo",
+            "status": "idle",
+            "area": "6",
+			"serverId":"1001"
+        },
+		{
+            "ip": "10.103.252.96",
+            "port": "10099",
+            "name": "96 server",
+            "status": "idle",
+            "area": "4",
+			"serverId":"1001"
+        },
+		{
+            "ip": "login3007.qcard3.com",
+            "port": "10099",
+            "name": "on line",
+            "status": "idle",
+            "area": "10",
+			"serverId":"1001"
+        },
+		{
+            "ip": "10.103.252.85",
+            "port": "9999",
+            "name": "85",
+            "status": "idle",
+            "area": "10",
+			"serverId":"1001"
+        }		
+    ]
+}

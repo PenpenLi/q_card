@@ -1,0 +1,4 @@
+class CFunctionToLua
+{
+    static bool isDebug();
+};

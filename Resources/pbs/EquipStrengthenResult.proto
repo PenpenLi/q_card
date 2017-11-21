@@ -1,0 +1,20 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message EquipStrengthenResult {
+  enum traits { value = 10058;}
+  enum Result{
+    Ok = 0;
+    NoSuchEquip = 1;		//没有该装备
+	NotEquiped = 2;			//装备没有装备到卡牌上不允许执行该操作
+	CardLevelLimit = 3;     //装备等级必须小于卡牌等级才允许执行该操作
+	EquipLevelMax = 4;		//装备等级已经满级
+	ConfigError = 5;		//装备升级表里没有该等级段的配置
+	NotEnoughCurrency = 6;	//没有足够的货币
+	NotFoundCard = 7;		//没有找到卡牌
+	NotExclusiveEquip =8; 	//不是专属武器
+  }
+  required Result state = 1;
+  optional ClientSync client_sync = 2;
+  optional int32 crtical_times = 3;
+}
+

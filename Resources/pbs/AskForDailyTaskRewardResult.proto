@@ -1,0 +1,13 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message AskForDailyTaskRewardResult {
+  enum traits { value = 4418;}
+  enum State {
+    Ok = 0;
+    NeedCondition = 1;
+    NoSuchTask = 2;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+  optional int32 config_id = 3;
+}

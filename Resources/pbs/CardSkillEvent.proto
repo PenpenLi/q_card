@@ -1,0 +1,13 @@
+import "BattleCommon.proto";
+package DianShiTech.Protocal;
+
+message CardSkillEvent {
+  enum traits { value = 8101;}
+  required int32 attacker = 1; 
+  required int32 skill_id = 2;
+  repeated int32 target = 3;
+  required int32 wall_group = 4;
+  repeated CardEffect effect = 5;
+  repeated CardSkillDamage skill_damage = 6;
+  repeated CardMove move = 7;
+}

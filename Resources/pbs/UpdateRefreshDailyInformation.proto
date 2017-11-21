@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message UpdateRefreshDailyInformation {
+  enum traits { value = 2288;}
+  required int32 next_refresh_time = 1;
+  enum RefreshType {
+    Spirit = 0;
+    Command = 1;
+  };
+  optional RefreshType refresh_type = 2;
+}

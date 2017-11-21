@@ -1,0 +1,6 @@
+package DataExchange;
+message Header {
+  required fixed32 size = 1;
+  required fixed32 type = 2;
+  required fixed32 id = 3 [default = 0];
+}

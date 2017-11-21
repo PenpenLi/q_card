@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message PVPUseProtectItemC2S{
+	enum traits{ value = 5118;}
+	required int32 item = 1;
+}

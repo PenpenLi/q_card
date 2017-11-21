@@ -1,0 +1,11 @@
+package DianShiTech.Protocal;
+message VipState {
+  optional int32 start_time = 1;							//月卡开始时间
+  optional int32 end_time = 2;								//月卡结束时间
+  optional int32 last_receive_gift_time = 3;				//上次领取月卡福利时间
+  optional int32 receive_development_plan_time = 4;			//是否是月卡(以前VIP由于有一天的掉落道具出来,成长计划的资格)
+  optional int32 receive_development_plan_gift_times = 5;	//成长计划当前进度
+  optional int32 total_receive_gift_times = 6;				//月卡福利的次数
+  optional int32 vip_ticket_state = 7; 						//是否购买成长计划
+  repeated int32 vip_level_gift = 8; 						//购买vip等级礼包记录(新VIP礼包)
+}

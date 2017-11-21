@@ -1,0 +1,44 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+
+message RankMatchServerBase{
+	optional int32 id 			= 1;	//玩家id
+	optional int32 rank 		= 2;	//玩家排行  -1 无排行
+	optional int32 max_rank 	= 3;	//玩家最大排行 -1 无排行
+	optional int32 fight 		= 4;	//玩家战斗力
+	optional int32 total_win 	= 5;	//总计胜利场次
+	optional int32 last_time 	= 6;	//上次战斗时间
+	optional int32 use_count 	= 7;	//当天使用次数
+	optional int32 max_count	= 10;	//当天可以使用次数
+	repeated int32 reports 		= 8;	//战报
+	optional int32 total_count	= 9;	//总计战斗次数
+	repeated int32 target		= 11;	//目标数据
+	optional int32 flag			= 12;	//入库标示
+}
+message RankMatchAward{
+	optional int32 honor = 1; //荣誉点
+}
+message RankMatchServerReport{
+	optional int32 report_id		= 8;	//战报ID
+	optional int32 attacker 		= 1;	//进攻方
+	optional int32 defender 		= 2;	//防守方
+	optional int32 result 			= 3;	//战斗结果
+	optional int32 attacker_rank	= 4;	//进攻方排名
+	optional int32 defender_rank	= 5;	//防守方排名
+	optional int32 time				= 6;	//战斗时间
+	optional int32 review_id		= 7;	//录像ID
+}
+
+message RankMatchBase{
+	required RankMatchServerBase base 	= 1;	//基础数据
+	optional int32 level 				= 2;	//玩家等级
+	optional string name 				= 3;	//玩家名字
+	optional int32 head 				= 4;	//玩家头像
+	optional FightCards card 			= 5;	//玩家阵容
+}
+
+message RankMatchReport{
+	optional RankMatchBase	attacker		= 1;	//进攻方
+	optional RankMatchBase	defender 		= 2;	//防守方
+	optional RankMatchServerReport content 	= 3;	//详细信息
+}

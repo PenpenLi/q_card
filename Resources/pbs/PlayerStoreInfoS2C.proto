@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "StoreItem.proto";
+message PlayerStoreInfoS2C{
+	enum traits {value = 5148;}
+	optional PlayerStore store = 1;
+}

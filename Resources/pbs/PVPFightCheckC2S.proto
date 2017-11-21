@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+message PVPFightCheckC2S{
+  enum traits{
+    value = 5024;
+  }
+  required int32 target = 1; // 复仇战 填写复仇的ID 。匹配战 填写匹配ID
+  optional int32 target_type = 2; //  0 --普通搜索  1-- 挑战排行榜  2 --复仇 
+}

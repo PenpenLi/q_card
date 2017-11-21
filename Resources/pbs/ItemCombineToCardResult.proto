@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ItemCombineToCardResult {
+  enum traits { value = 2578;}
+  enum State {
+    Ok = 0;
+    NeedMoreBagCell = 1;
+    NotEnoughCurrency = 2;
+    NeedMoreItem = 3;
+	NotFoundTargetCard = 4;
+	HasSameCard = 5; 
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 4;
+}

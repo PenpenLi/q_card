@@ -1,0 +1,6 @@
+import "InnerFastCreatePlayerResult.proto";
+import "PlayerBaseInformation.proto";
+package DianShiTech.Protocal;
+extend InnerFastCreatePlayerResult {
+  optional PlayerBaseInformation Create_PlayerBase = 1000;
+}

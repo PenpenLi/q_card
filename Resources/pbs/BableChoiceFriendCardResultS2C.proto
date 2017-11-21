@@ -1,0 +1,12 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message BableChoiceFriendCardResultS2C{
+   enum traits {value = 10086;}
+   enum State{
+	  FriendAlreadyHelp = 1;			//该好友今天已经帮助过你了
+	  FriendHasNoHelpCard = 2;			//该好友没有指定卡牌帮助别人
+	  Success = 3;
+   }
+   required State state = 1;
+   optional ClientSync client_sync = 2;
+}

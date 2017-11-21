@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "BossFightBase.proto";
+message BossQueryRankResultS2C{
+  enum traits { value = 5057 ; }
+  required int32 boss = 1;
+  required BossRankData rank = 2;
+}

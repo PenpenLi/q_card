@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message RegisterToDataCenter {
+  enum traits { value = 30;}
+}

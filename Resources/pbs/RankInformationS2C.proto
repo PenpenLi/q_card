@@ -1,0 +1,17 @@
+package DianShiTech.Protocal;
+import"PlayerFriends.proto";
+message RankInformationS2C{
+  enum traits {value = 5156;}
+  enum RankEnum{
+	RANK_LEVEL = 1;				//总经验排行榜
+	RANK_VIP_LEVEL = 2;			//VIP排行榜
+	RANK_MATCH = 3;				//排位赛榜单
+  };
+  
+  message RankInformation{
+	required RankEnum en = 1;
+	repeated RelationData players = 2;
+  }
+  
+  repeated RankInformation ranks = 1; //排行榜数据
+}

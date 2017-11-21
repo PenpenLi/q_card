@@ -1,0 +1,5 @@
+class ChannelManager
+{
+    static std::string getCurrentLoginChannel();
+    static std::string getCurrentDownloadChannel();
+};

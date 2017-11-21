@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message DrawCardRebate{
+  optional int32 rebate_id = 1;        //返利活动ID (id 3002 登录7天有奖)
+  optional int32 rebate_count = 2;     //返利进行了几次（id 3002 可以领取的次数）
+  optional int32 rebate_time = 4;      //单次返利到期时间 （id 3002 上一次刷新时间rebate_time）
+  optional int32 rebate_end_time = 5;   //整体返利结束时间
+  optional int32 rebate_money = 6;     //等待领取的返利数量
+  optional int32 rebate_tem_money = 8;  //等待时间到后返利的钱
+  optional int32 current_draw_count = 7;//计算本次返利抽奖次数（id 3002当前领到的次数）
+}

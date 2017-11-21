@@ -1,0 +1,11 @@
+import "DailyTaskTable.proto";
+package DianShiTech.Protocal;
+message AskForDailyTaskTableResult {
+  enum traits { value = 3466;}
+  enum State {
+    Ok = 0;
+    NoRight = 1;
+  }
+  required State state = 1;
+  optional DailyTaskTable table = 2;
+}

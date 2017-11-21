@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message BableGetHelpFriendAwardC2S{
+  enum traits {
+    value = 10099;
+  }
+}

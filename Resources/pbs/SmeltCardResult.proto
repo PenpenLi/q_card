@@ -1,0 +1,17 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message SmeltCardResult {
+  enum traits { value = 2638;}
+  enum State {
+    Ok = 0;
+    NeedMoreBagCell = 1;
+    NoSuchCardId = 2;
+    IsActiveCard = 3;
+    HasEquipmentInCard = 4;
+    NotEnoughCurrency = 5;
+    IsMineCard = 6;
+	ErrorExpCard = 7;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

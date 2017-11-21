@@ -1,0 +1,14 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+
+message SellItemToSystemResult {
+  enum traits { value = 3272;}
+  enum State {
+    Ok = 0;
+    NoSuchItem = 1;
+    ItemCountError = 2;
+	NotSellItem = 3;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message QueryGateServerState {
+  enum traits {
+    value = 11;
+  }
+}

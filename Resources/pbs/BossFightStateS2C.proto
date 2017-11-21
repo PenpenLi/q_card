@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+import "BossFightBase.proto";
+message BossFightStateS2C{
+  enum traits {value = 5055 ;}
+
+  enum BossState{
+    BOSS_OPEN = 1;
+    BOSS_CLOSE = 2;
+  }
+
+  required int32 boss = 1;
+  required BossState state = 2;
+  repeated BossSpecialCard card = 3;
+}

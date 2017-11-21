@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message UseWordGameItemC2S{
+	enum traits{ value = 5120;}
+	required int32 gameId = 1;
+	optional int32 count = 2;
+}

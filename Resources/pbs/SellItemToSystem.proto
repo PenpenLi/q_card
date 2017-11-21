@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+
+message SellItemToSystem {
+  enum traits { value = 3271;}
+  required int32 item_id = 1;
+  // WARNING!!!!!!!!!!!
+  optional int32 count = 2; // if zero or not fill. System think you want sell ALL!
+}

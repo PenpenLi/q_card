@@ -1,0 +1,3 @@
+1. 执行脚本 build.bat 会将Resources目录拷贝到同级的目录 DstRes 并将其中的lua文件编译成字节码；
+2. 打包APK时, 编译so库时需要使用 DstRes 目录作为 源码数据包.（可将Resources改名备份，DstRes重命名为Resources）
+3. 注意 DstRes 下的文件不能有中文名字的lua脚本,否则编译报错。

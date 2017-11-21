@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message ActivityFightReqCS2BS{
+ enum traits { value = 10031;}
+ required int32 activity_id = 1;
+ required FightMap map = 2;
+ required FightCards cards = 3;
+}

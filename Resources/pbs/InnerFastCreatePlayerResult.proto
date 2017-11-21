@@ -1,0 +1,13 @@
+import "FastCreatePlayerResult.proto";
+
+package DianShiTech.Protocal;
+
+message InnerFastCreatePlayerResult {
+  enum traits { value = 17;}
+  required int64 session = 1;
+  optional string player_name = 2;
+  optional string server_name = 3;
+  optional string property_load_key = 4;
+  required FastCreatePlayerResult result = 5;
+  extensions 1000 to 1100;
+}

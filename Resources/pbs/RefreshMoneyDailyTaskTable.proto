@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message RefreshMoneyDailyTaskTable {
+  enum traits { value = 4427;}
+}

@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message GuildFightCheckC2S{
+  enum traits{ value = 5186 ; }
+}

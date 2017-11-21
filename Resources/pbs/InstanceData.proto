@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+message InstanceData{
+  enum StageResult{
+    STAGE_CLOSE  = 0;
+    STAGE_OPEN   = 1;
+    STAGE_STAR_1 = 2;
+    STAGE_STAR_2 = 3;
+    STAGE_STAR_3 = 4;
+  }
+
+  required int32 stage = 1;
+  required int32 count = 3;   //每天可以打副本的次数
+  optional int32 star1 = 4;   //1星通过次数
+  optional int32 star2 = 5;   //2星通过次数
+  optional int32 star3 = 6;   //3星通过次数
+  optional int32 pass  = 7;   //总通过次数
+  optional int32 last_enter_time = 8; //最后一次进入副本时间
+  optional int32 buy_count = 9; //每日购买次数
+  required StageResult result = 2;
+}

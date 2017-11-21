@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>timg.png</key>
+            <dict>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
+                <string>{1024,768}</string>
+                <key>spriteSourceSize</key>
+                <string>{1024,768}</string>
+                <key>textureRect</key>
+                <string>{{1,1},{1024,768}}</string>
+                <key>textureRotated</key>
+                <false/>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA4444</string>
+            <key>premultiplyAlpha</key>
+            <false/>
+            <key>realTextureFileName</key>
+            <string>act_day_surprise.pvr.ccz</string>
+            <key>size</key>
+            <string>{1026,770}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:7a7e7a8a2413ef96bf0438c054b9a2aa:1a70e0def236513dd718d96d2845161d:3469e383d1efc52b873764c137284d74$</string>
+            <key>textureFileName</key>
+            <string>act_day_surprise.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

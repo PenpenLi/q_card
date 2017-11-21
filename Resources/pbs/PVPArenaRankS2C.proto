@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+import "PVPArenaBase.proto";
+message PVPArenaRankS2C{
+	enum traits{value = 5145;}
+	message RankInfo{
+		optional int32 rankId = 2;
+		repeated PVPArenaBase rank_data = 1;
+	};
+	repeated RankInfo ranks = 1;
+}

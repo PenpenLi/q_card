@@ -1,0 +1,19 @@
+import "BattleCommon.proto";
+package DianShiTech.Protocal;
+
+message CardSubAttack {
+  required int32 target = 1; 
+  required int32 damage_type = 2;
+  required int32 final_hp = 3; 
+  required int32 damage = 4;
+  optional bool is_attack_wall = 5;
+}
+
+message CardAttackEvent {
+  enum traits { value = 8101;}
+  required int32 attacker = 1; 
+  repeated CardSubAttack sub_attack = 2; 
+  repeated CardEffect effect = 3;
+  repeated CardSkillDamage skill_damage = 4;
+  optional bool is_force_melee = 5; 
+}

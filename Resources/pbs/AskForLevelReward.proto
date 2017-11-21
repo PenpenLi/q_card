@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message AskForLevelReward {
+  enum traits { value = 3557;}
+}

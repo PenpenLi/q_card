@@ -1,0 +1,12 @@
+package DianShiTech.Protocal;
+message EquipStrengthen {
+  enum traits { value = 10057;}
+  enum OpType{
+    StrengthenOnce = 1;		//强化单次
+	StrengthenNoLimit =2;	//一键强化装备
+	StrengthenCardEquipment = 3;	//一键强化卡牌所有装备
+  }
+  optional int32 target_id = 1; // op_type = StrengthenCardEquipment 时 target_id = 卡牌ID 否则是目标的装备ID
+  required OpType op_type = 2; // 单次一键强化装备
+}
+

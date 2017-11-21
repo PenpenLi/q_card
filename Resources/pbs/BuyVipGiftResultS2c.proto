@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message BuyVipGiftResultS2c{
+	enum traits {value = 5154;}
+	enum ErrorCode{
+		NO_ERROR_CODE 	= 1;
+		NEED_VIP_LEVEL 	= 2;	//VIP等级不足
+		HAS_BUYED_GIFT	=4;		//已经购买过
+		NEED_MORE_MONEY	= 3;	//货币不足
+		SYSTEM_ERROR 	= 100;
+	}
+	required ErrorCode  	error = 1;		
+	optional ClientSync 	client = 2;		
+}

@@ -1,0 +1,16 @@
+package DianShiTech.Protocal;
+import "PVPRankMatchBase.proto";
+import "ClientSync.proto";
+message PVPRankMatchClearCDResultS2C{
+	enum traits{value = 5168;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_HAS_CD = 2;
+		NEED_MORE_MONEY = 3;
+		NOT_HAS_CHANCE = 4;
+		SYSTEM_ERROR = 99;
+	}
+	required ErrorCode error = 1;
+	optional RankMatchBase base = 2;
+	optional ClientSync client = 3;
+}

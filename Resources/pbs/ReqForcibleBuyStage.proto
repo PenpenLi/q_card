@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message ReqForcibleBuyStage{
+ enum traits { value = 9904;}
+ repeated int32 stage_id = 1;
+}

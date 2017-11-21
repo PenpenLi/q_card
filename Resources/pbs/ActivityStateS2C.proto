@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+message ActivityStateS2C{
+	enum traits{value = 5175;}
+	message Activity{
+		optional int32 type = 1;		//activity id
+		optional int32 index = 2;		//activity act_same_index
+		optional int32 state = 3;		//open or close
+	}
+	repeated Activity activity = 1;	
+}

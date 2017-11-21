@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message QueryDrawCardRebateC2S {
+  enum traits{value = 5105;}
+  required int32 id = 1;  //返利事件的ID
+}

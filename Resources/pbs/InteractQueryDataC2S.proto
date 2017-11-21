@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message InteractQueryDataC2S{
+  enum traits {value = 5060 ; }
+  required int32 id = 1;
+}

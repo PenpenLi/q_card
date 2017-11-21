@@ -1,0 +1,12 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqBableResetResultS2C{
+   enum traits {value = 10091;}
+   enum State{
+	  ConfigError = 1;
+	  ResetTimesLimit = 2;
+	  Success = 3;
+   }
+   required State state = 1;
+   optional ClientSync client_sync = 2;
+}

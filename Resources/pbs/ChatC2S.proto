@@ -1,0 +1,12 @@
+package DianShiTech.Protocal;
+message ChatC2S{
+	enum traits{value = 5191;}
+	enum Channel{
+		TO_PLAYER = 1;		//玩家私聊
+		TO_WORLD = 2;		//全服
+		TO_GUILD = 3;		//公会
+	}
+	optional string content = 2;
+	optional int32 player = 1;
+	optional Channel channel = 3;
+}

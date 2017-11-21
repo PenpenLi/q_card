@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message TaskConditionState {
+  required int32 id = 1;
+  optional int32 current_state = 2;
+  optional int32 final_state = 3;
+}

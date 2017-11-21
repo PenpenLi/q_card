@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message MailUpdateC2S{
+  enum traits{value = 5081;}
+  required  uint32 id = 1;
+  required  uint32 flag = 2;
+}

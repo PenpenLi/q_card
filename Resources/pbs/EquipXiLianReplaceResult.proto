@@ -1,0 +1,11 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message EquipXiLianReplaceResult {
+  enum traits { value = 10051;}
+  enum State {
+    Ok = 0;
+    NoSuchEquip = 1;		//没有该装备
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

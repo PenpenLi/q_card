@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message ReqUseBigWheel{
+	enum traits {value = 10074;}
+	required int32 times = 1;
+}

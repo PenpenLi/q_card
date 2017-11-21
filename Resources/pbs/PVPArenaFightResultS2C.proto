@@ -1,0 +1,18 @@
+package DianShiTech.Protocal;
+import "FightResult.proto";
+import "PVPArenaBase.proto";
+message PVPArenaFightResultS2C{
+	enum traits{value = 5135;}
+	enum ArenaType{
+		FIGHT_NORMAL = 1;		//正常战斗
+		FIGHT_DISCONNECT = 2;	//有玩家掉线
+	}
+	//type = FIGHT_DISCONNECT 时候 
+	//result 里面战斗动画播放数据时空的 只需要读结算数据
+	required ArenaType 	type = 1;		//结算类型  
+	optional FightResult result = 2;	//结算数据
+	optional PVPArenaData self = 3;		//自己数据更新
+	optional PVPArenaAward award = 4;	//战报相关数据
+	
+}
+

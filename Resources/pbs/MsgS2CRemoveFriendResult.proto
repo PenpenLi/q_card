@@ -1,0 +1,16 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//移除好友结果
+message MsgS2CRemoveFriendResult{
+  enum trauts{
+    value = 5007;
+  }
+  enum Result{
+    REMOVE_OK = 0;
+    NOT_FOUND = 1;
+    SYSTEM_ERROR = 2;
+  }
+  optional int32 id = 1;
+  optional Result result = 2;
+}

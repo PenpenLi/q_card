@@ -1,0 +1,18 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+
+message EatCardResult {
+  enum traits { value = 1089;}
+  enum ErrorCode {
+    NO_ERROR_CODE = 1;
+	NOT_HAS_ENOUGH_ITEM = 2;	//道具数量有误
+	CARD_LEVEL_MAX = 3;			//卡牌已经到达等级上限
+	NEED_MORE_COIN = 4;			//需要更多的铜钱
+	NOT_CARD_EXP_ITEM = 5;		//不是经验药水
+	NOT_FOUND_CARD = 6;			//没有找到要升级的卡片
+	SYSTEM_ERROR = 50;
+  }
+  required ErrorCode error = 1;
+  optional ClientSync client_sync = 2;
+  optional int32 flag = 3; //暴击标示
+}

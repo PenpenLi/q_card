@@ -1,0 +1,6 @@
+import "DailyTaskMeta.proto";
+package DianShiTech.Protocal;
+message DailyTaskTable {
+  optional int32 next_refresh_time = 1;
+  repeated DailyTaskMeta meta = 2;
+}

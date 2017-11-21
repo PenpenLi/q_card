@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import"NoticeBase.proto";
+message NoticeS2C{
+  enum traits{ value =  5085;}
+  required NoticeData notice = 1;
+}

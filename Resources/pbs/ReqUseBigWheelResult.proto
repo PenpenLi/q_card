@@ -1,0 +1,14 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqUseBigWheelResult{
+   enum traits {value = 10075;}
+   enum State{
+	  NotEnoughMoney = 1;	//没有足够的元宝
+	  ActivityNotOpen = 2;
+	  ConfigError = 3;
+	  Success = 4;
+   }
+   required State state = 1;
+   optional ClientSync client_sync = 2;
+   repeated int32 cards = 3;
+}

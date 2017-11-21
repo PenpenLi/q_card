@@ -1,0 +1,17 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message PlayerBuyFormStoreResultS2C{
+	enum traits {value = 5150;}
+	enum ErrorCode{
+		NO_ERROR_CODE 	= 1;
+		NOT_FOUND_ITEM 	= 2;	//没有这个道具
+		NOT_MORE_COUNT 	= 3;	//已经达到购买最大次数
+		NEED_VIP_LEVEL 	= 4;	//VIP等级不足
+		NEED_MORE_MONEY	= 5;	//货币不足
+		STORE_CLOSED    = 6;	//商店已经关闭
+		
+		SYSTEM_ERROR 	= 100;
+	}
+	required ErrorCode  error = 1;
+	optional ClientSync client = 2;
+}

@@ -1,0 +1,29 @@
+package DianShiTech.Protocal;
+import "PlayerPVPBaseInfo.proto";
+message PVPDataSyncCommon{
+  enum SyncOP{
+    OP_ADD = 1;
+    OP_UPDATE = 2;
+    OP_REMOVE = 3;
+  }
+  message PVPEnemySync{
+    required SyncOP       op = 1;
+    required PVPBaseData  base = 2;
+  }
+  message PVPReportSync{
+    required SyncOP     op = 1;
+    required PVPReport  report = 2;
+  }
+  message PVPAwardSync{
+    required SyncOP op = 1;
+    required PVPAward award = 2;
+  }
+
+  required PVPBaseData    base    = 1;    //基础数据
+  repeated PVPEnemySync   enemys  = 2;    //仇人数据
+  repeated PVPReportSync  reports = 3;    //战报数据
+  required bool      reset_target = 4;    //目标数据
+  repeated PVPAwardSync   awards  = 5;    //奖励数据
+  required int32        keepAward = 6;    //连胜数据
+  optional int32 		stepAward = 7;    //新手奖励
+}

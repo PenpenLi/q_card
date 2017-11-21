@@ -1,0 +1,37 @@
+import "CommanderCardGroup.proto";
+package DianShiTech.Protocal;
+message InnerSyncMoney {
+  enum traits { value = 4001;}
+  optional int32 id = 1;
+  required int32 current = 2;
+  optional sint32 changed = 3;
+}
+message InnerSyncCoin {
+  enum traits { value = 4002;}
+  optional int32 id = 1;
+  optional sint32 coin = 2;
+}
+
+message InnerSyncLevel {
+  enum traits { value = 4003;}
+  optional int32 id = 1;
+  required int32 level = 2;
+  required int32 level_exp = 3;
+}
+
+message InnerSyncLoyatal {
+  enum traits { value = 4004;}
+  optional int32 id = 1;
+  required int32 loyatal = 3;
+}
+
+message InnerSyncCard {
+  enum traits { value = 4005;}
+  optional int32 id = 1;
+  enum Type {
+    Backup = 0;
+    Active = 1;
+  }
+  optional Type type = 2;
+  repeated CommanderCard card = 3;
+}

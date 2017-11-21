@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+message InteractCardTryWorkC2S{
+  enum traits { value = 5064;}
+  enum WorkState{
+	STATE_WORK = 1;
+	STATE_IDLE = 2;
+  }
+  enum SearchEnum{
+	LEVEL_LARGE = 1;
+	LEVEL_LIMIT = 2;
+  }
+  required int32 card     = 1;
+  required WorkState state = 5;
+  optional int32 miners   = 2;
+  optional int32 pos      = 3;
+  optional int32 duration = 4;
+  //快捷打工时候使用
+  optional SearchEnum type = 6;
+  optional SearchEnum card_type = 7;
+}

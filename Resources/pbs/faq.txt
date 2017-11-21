@@ -1,0 +1,25 @@
+//基础数据结构
+1 .PlayerPVPBaseInfo.proto             (PVP基础数据结构)
+2 .PVPDataSyncCommon.proto             (PVP数据更新模块)
+//消息
+3 .PVPQueryDataC2S.proto ->5020        (请求玩家的PVP信息）
+4 .PVPQueryDataResultS2C.proto->5021   (回馈玩家的PVP信息)
+5 .PVPQueryTargetC2S.proto->5022       (请求刷新PVP目标)
+6 .PVPQueryTargetResultS2C.proto->5023 (回馈PVP目标信息)
+7 .PVPFightCheckC2S.proto->5024        (请求检查PVP战斗)(返回FightErrorBS2CS)
+8 .PVPFightReqC2S.proto->5030          (请求开始PVP战斗)(如果有错误返回FightErrorBS2CS,战斗结果FightResult, pvp战斗会更新PVPFightResultS2C同时下发）
+9 .PVPFightResultS2C.proto->5028       (玩家PVP信息更新)
+10.PVPAwardC2S.proto->5029             (领取PVP相关奖励)
+11.PVPAwardResultS2C.proto->5032       (PVP奖励领取结果) 
+12.PVPCalculateResultS2C.proto->5033   (征战系统22点结算数据）
+13.PVPQueryRankC2S.proto->5044         (请求排行榜）
+14.PVPQueryRankResultS2C.proto->5045   (排行榜数据）
+
+
+//下面是服务器使用消息
+15.PVPTatgetDataCS2BS.proto->5025      (PVP对象的信息-服务器内部使用）
+16.PVPFightReportBS2CS.proto->5026     (BS通知CS一个新的战报-服务器内部使用)
+17.PVPFightCardPosBS2CS.proto->5027    (BS通知CS玩家阵型改变-服务器内部使用)
+18.PVPAwardResultCS2BS->5031           (CS通知BS征战奖励数据-服务器内部使用)
+配置表相关的是ConfigDef.h
+还有一个GameDef.h

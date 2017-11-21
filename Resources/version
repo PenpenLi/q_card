@@ -1,0 +1,45 @@
+{
+    "version": "1.2.0.0",
+    "netConfig": [
+        {
+            "ip": "10.103.252.67",
+            "port": "9999",
+            "name": "67_trunk",
+            "status": "recommend",
+            "area": "1",
+			"serverId":"1"
+        },
+        {
+            "ip": "10.103.252.67",
+            "port": "19999",
+            "name": "67_branch",
+            "status": "recommend",
+            "area": "2",
+			"serverId":"1001"
+        },
+	{
+            "ip": "10.103.252.98",
+            "port": "9999",
+            "name": "98",
+            "status": "idle",
+            "area": "3",
+			"serverId":"1001"
+        },
+	{
+            "ip": "10.103.252.66",
+            "port": "9999",
+            "name": "66",
+            "status": "idle",
+            "area": "4",
+			"serverId":"1001"
+        },
+	{
+            "ip": "10.103.252.96",
+            "port": "10099",
+            "name": "96",
+            "status": "idle",
+            "area": "5",
+			"serverId":"1001"
+        }
+    ]
+}

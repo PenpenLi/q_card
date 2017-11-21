@@ -1,0 +1,24 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message CardTurnbackResult {
+  enum traits { value = 3286;}
+  enum State {
+    Ok = 0;
+    NoSuchCard = 1;
+    NeedMoreItem = 2;
+    NotEnoughCurrency = 3;
+    NoSuchConfigId = 4;
+    IsActiveCard = 5;
+    NeedCardLevel = 6;
+    NeedMoreEquipment = 7;
+    EquipmentIsUsed= 8;
+    EquipmentIdWrong= 9;
+    NeedMoreCard = 10;
+    NoSuchConsumedCard = 11;
+    ConsumedCardIsActive = 12;
+    ConsumedCardInMine = 13;
+    ConsumedCardIdWrong = 14;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

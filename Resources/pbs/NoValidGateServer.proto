@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+message NoValidGateServer {
+  enum traits { value = 3001;}
+  enum Reason {
+    NoServer = 0;
+    AllBusy = 1;
+  }
+  required Reason reason = 1;
+}

@@ -1,0 +1,10 @@
+import "PlayerFriends.proto";
+
+package DianShiTech.Protocal;
+//邮件列表
+message MsgS2CMailList{
+  enum trauts{
+    value = 5009;
+  }
+  required MailList mail = 1;
+}

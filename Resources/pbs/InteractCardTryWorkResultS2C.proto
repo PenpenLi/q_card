@@ -1,0 +1,21 @@
+package DianShiTech.Protocal;
+import "InteractPlayerBase.proto";
+
+message InteractCardTryWorkResultS2C{
+  enum traits { value = 5065 ; }
+  enum ErrorCode{
+    NO_ERROR_CODE = 0;
+    NOT_FOUND_CARD = 1;
+    NOT_YOUR_FRIEND = 2;
+    MINES_FULL = 3;
+    CARD_IS_BUSY = 4;
+	NOT_FOUND_POS = 7;
+	NOT_FOUND_TARGET = 6;
+	CARD_IS_WORKING = 8;
+	ALL_FRIEND_FULL = 9;
+    SYSTEN_ERROR = 5;
+  }
+
+  required ErrorCode  error   = 1;
+  optional InteractDataUpdate update = 2;
+}

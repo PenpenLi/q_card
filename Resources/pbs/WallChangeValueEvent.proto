@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+
+message WallChangeValueEvent {
+  enum traits { value = 8113;}
+  enum ChangeType{
+	ChangeTypeAngry = 0;
+	ChangeTypeMaxHp = 1;
+	ChangeTypeCurHp = 2;
+	ChangeTypeGroup = 3;
+  }
+  required int32 wall_group = 1;
+  required int32 change_value = 2;
+  required ChangeType change_type = 3;
+}

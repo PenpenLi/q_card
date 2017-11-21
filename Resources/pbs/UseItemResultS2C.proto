@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message UseItemResultS2C{
+	enum traits{ value = 5126;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		NOT_HAS_ENOUGH_ITEM = 2;	//道具数量不够
+		ERROR_ITEM = 3;				//道具ID不存在
+		NOT_FOUND_ITEM = 4;			//没有找到这个道具
+		ITEM_TYPE_NOT_ALLOW = 5; 	//道具类型不允许
+		NO_TALENT_LEVEL_UP = 6;		//没有天赋在升级
+		TANLENT_BANK_FULL = 7;		//天赋仓库已满
+		PLAYER_LEVEL_LIMIT = 8;		//玩家等级不够
+		NOT_HAS_ENOUGH_KEY = 9;		//没有足够的钥匙
+		ALREADY_HAS_MODULE_BUFF = 10; //该模块已经有buff
+		SYSTEM_ERROR = 50;
+	}
+	required ErrorCode	  error = 1;
+	optional ClientSync   client = 2;
+}

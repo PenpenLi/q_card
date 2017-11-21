@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message BossFightCheckC2S{
+  enum traits{ value = 5047 ; }
+  required int32 boss = 1;
+  optional string name = 2;
+  //required FightMap map = 1;
+}

@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message PVPRankMatchFightCheckC2S{
+	enum traits{value = 5164;}
+	required int32 target = 1;		//选择的目标
+}

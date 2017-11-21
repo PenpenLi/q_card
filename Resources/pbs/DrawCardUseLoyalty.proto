@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message DrawCardUseLoyalty {
+  enum traits { value = 1025;}
+  required int32 config_id = 1;
+}

@@ -1,0 +1,15 @@
+
+
+class DataEncrypt
+{
+	static DataEncrypt *sharedParser();
+
+	bool byteEncode(unsigned char *inBuff,unsigned int inBufLen, unsigned char *outBuff, unsigned int &outLen);
+	bool byteDecode(unsigned char *inBuff,unsigned int inBufLen, unsigned char *outBuff, unsigned int &outLen);
+
+	bool fileEncode(char *fileName);
+	bool fileDecode(char *fileName);
+
+	void encode(std::string & str);
+	void decode(std::string & str);
+};

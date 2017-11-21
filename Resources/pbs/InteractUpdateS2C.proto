@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "InteractPlayerBase.proto";
+message InteractUpdateS2C{
+  enum traits{value = 5066;}
+  required InteractDataUpdate update = 1;
+}

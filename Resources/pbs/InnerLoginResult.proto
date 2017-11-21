@@ -1,0 +1,14 @@
+import "LoginResult.proto";
+
+package DianShiTech.Protocal;
+
+message InnerLoginResult {
+  enum traits { value = 20;}
+  required int64 session = 1;
+  required LoginResult result = 2;
+  optional string server_name = 3;
+  optional bool is_valid_load_key = 5;
+  optional bytes property_load_key = 4;
+  optional bytes player_name = 6;
+  extensions 1000 to 1100;
+}

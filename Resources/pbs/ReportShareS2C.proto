@@ -1,0 +1,20 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+import "PlayerFriends.proto";
+message ShareReport{
+	enum ReportSource{
+		SYSTEM = 1;		//来自玩家
+		PLAYER = 2;		//来自系统
+	}
+	optional FightType ft = 1;				//战报类型
+	optional int32 view = 2;				//录像Id
+	optional RelationData attacker = 3;		//进攻方
+	optional RelationData defender = 4;		//防守方
+	optional int32 other = 5;				//附带数据  如果FightType = Protocal::PVE_NORMAL  other = 副本ID
+	optional ReportSource source = 6; 		//来源
+}
+message ReportShareS2C{
+	enum traits{ value = 5208;}
+	repeated ShareReport share = 1; 	//分享战报列表
+	optional RelationData player = 2;	//分享者
+}

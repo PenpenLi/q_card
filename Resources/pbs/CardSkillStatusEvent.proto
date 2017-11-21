@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+
+message CardSkillStatusEvent {
+  enum traits { value = 8106;}
+  enum Action{
+	Add = 0;
+	Remove = 1;
+  }
+  required int32 target = 1;
+  optional int32 status_id = 2;
+  optional int32 property_id = 3;
+  optional int32 property_type = 4;
+  required Action action = 5;
+}

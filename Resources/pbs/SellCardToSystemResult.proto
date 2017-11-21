@@ -1,0 +1,16 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message SellCardToSystemResult {
+  enum traits { value = 3542;}
+  enum State {
+    Ok = 0;
+    NoSuchCard = 1;
+    HasEquipment = 2;
+    IsActiveCard = 3;
+    CouldNotSell = 4;
+    SellAgain = 5;
+    IsMineCard = 6;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

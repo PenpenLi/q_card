@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message DropDailyTask {
+  enum traits { value = 4423;}
+  required int32 id = 1;
+}

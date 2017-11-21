@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message ReqExchangeActivityCard{
+	enum traits {value = 10102;}
+	required int32 self_card_id = 1;
+	required int32 target_card_root_id = 2;
+}

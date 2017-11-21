@@ -1,0 +1,5 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqBableDailyAwardC2S{
+	enum traits {value = 10094;}
+}

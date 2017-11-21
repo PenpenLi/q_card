@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import "PVPArenaBase.proto";
+message PVPArenaQueryResultS2C{
+	enum traits{value = 5128;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;	//
+		NOT_OPEN_TIME = 2;	//时间没到
+		LEVEL_LIMIT   = 3;  //等级不够
+		SYSTEM_ERROR  = 4;  //其他错误
+	}
+	required ErrorCode error = 1;			
+	optional PVPArenaData data = 2;	
+}

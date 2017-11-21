@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message Currency {
+  required int32 money = 1;
+  required int32 coin = 2;
+  required int32 point = 3;
+}

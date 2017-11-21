@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message PVPRankMatchQueryC2S{
+	enum traits{value = 5160;}
+}

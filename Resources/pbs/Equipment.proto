@@ -1,0 +1,29 @@
+package DianShiTech.Protocal;
+
+message Equipment {
+  message AddedSkill {
+    enum GenreateType {
+      Base = 0;
+      Random = 1;
+    }
+	enum SkillState {
+      Normal = 0;
+      BeReplaced = 1;
+	  Replaced = 2;
+    }
+    required int32 type = 1;
+    required int32 data = 2;
+	required int32 skill_id = 3;
+	required SkillState state = 4;
+    required GenreateType generate_type= 5;
+  }
+
+  required int32 id = 1;
+  optional int32 config_id = 2;
+  optional int32 card_id = 4;  // if cardid == 0 means just in bag..
+  // in server we never care card_id is what! just know it's == 0 or not
+  // but this is a help for client to know which card owns this equipment
+  optional int32 exp = 5;
+  optional int32 level = 6;
+  repeated AddedSkill skill = 3;
+}

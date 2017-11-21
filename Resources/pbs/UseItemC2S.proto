@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message UseItemC2S{
+	enum traits{ value = 5125;}
+	required int32 item = 1;  //道具系统ID 目前允许使用ITEM表类型 21 22， 老的就不管了。
+	optional int32 count = 2; //道具的使用数量， 默认服务器是1
+}

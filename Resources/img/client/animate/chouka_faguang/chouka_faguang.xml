@@ -1,0 +1,22 @@
+<skeleton name="chouka_faguang" frameRate="30" version="2.2">
+ <armatures>
+  <armature name="chouka_fg_yj2">
+   <b name="图层 1" x="0.45" y="18.45" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0">
+    <d name="chouka_fg_yj1" pX="250" pY="232.4"/>
+   </b>
+  </armature>
+ </armatures>
+ <animations>
+  <animation name="chouka_fg_yj2">
+   <mov name="default" dr="50" to="6" drTW="50" lp="1" twE="NaN">
+    <b name="图层 1" sc="1" dl="0">
+     <f x="0.45" y="18.45" cocos2d_x="0.45" cocos2d_y="18.45" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0" dI="0" twE="0" dr="49"/>
+     <f x="0.45" y="18.45" cocos2d_x="0.45" cocos2d_y="18.45" kX="0" kY="0" cX="1" cY="1" pX="0" pY="0" z="0" dI="0" twE="0" dr="1" twR="1"/>
+    </b>
+   </mov>
+  </animation>
+ </animations>
+ <TextureAtlas name="chouka_faguang" width="512" height="512">
+  <SubTexture name="chouka_fg_yj1" width="500" height="500" cocos2d_pX="250" cocos2d_pY="232.4" x="0" y="0"/>
+ </TextureAtlas>
+</skeleton>

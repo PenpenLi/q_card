@@ -1,0 +1,58 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+enum PVPArenaEnum{
+	ARENA_CHECK_TIME = 30;		//
+	ARENA_RANK_COUNR = 10;
+}
+//基础数据
+message PVPArenaBase{
+	required int32 player 	= 1; 		//玩家ID
+	optional int32 rank 	= 2;		//分段
+	optional int32 score 	= 3;		//积分
+	optional int32 keepWin 	= 4;		//连胜
+	optional int32 maxWin 	= 5;		//最大连胜
+	optional string name 	= 6;		//玩家名字
+	optional int32 search 	= 7;		//搜索次数
+	optional int32 level	= 8;		//等级
+	optional int32 head     = 9;		//头像
+	
+}
+//配对数据
+message PVPArenaPair{
+	enum PairState{
+		WAIT_DATA = 1;			//等待布阵数据
+		WAIT_RESULT = 2;		//等待战斗服结算结果
+	}
+	optional PlayerFightBaseData attacker = 1; //进攻方
+	optional PlayerFightBaseData defender = 2; //防守方
+	optional bool attacker_prepair = 3;		   //进攻方数据
+	optional bool defender_prepair = 4;		   //防守方数据
+	optional PairState state = 5;			   //数据准备状态
+	optional int32 time = 6;				   //匹配时间
+	optional FightMap map = 7;				   //对战地图
+	optional int32 attacker_buffer = 8;		   //攻击方增加buffer
+	optional int32 defender_buffer = 9;		   //防守方增加buffer
+	//optional int32 attacker_append_buffer = 10;//攻击方增加buffer(使用道具增加的buff)
+	//optional int32 defender_append_buffer = 11;//防守方增加buffer(使用道具增加的buff)
+}
+//玩家数据
+message PVPArenaData{
+	optional PVPArenaBase base = 1;		//基础数据
+	repeated PVPArenaBase rankList = 2;	//当前排行榜
+	optional int32 rankNo = 3;			//自己排行数据
+}
+//搜索到对手数据
+message PVPArenaTarget{
+	optional PVPArenaBase base = 1;		//基础数据
+	optional FightCards cards  = 2;		//卡牌数据
+	optional int32 keepWinBuffer = 3;	//增加BUFF
+	optional bool isAttacker = 4;		//是否攻击
+	optional FightMap map = 7;			//对战地图
+}
+message PVPArenaAward{
+	optional int32 coin = 1;			//奖励金钱
+	optional int32 score = 2;			//奖励积分
+	optional int32 keepWin = 3;			//连胜场次
+	optional int32 stopWin = 4;			//终结连胜
+	repeated int32 drop = 5;			//掉落ID
+}

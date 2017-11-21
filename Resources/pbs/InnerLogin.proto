@@ -1,0 +1,11 @@
+import "Login.proto";
+
+package DianShiTech.Protocal;
+
+message InnerLogin {
+  enum traits { value = 19;}
+  required int64 session = 1;
+  required Login action = 2;
+  optional string server_name = 3;
+  optional bytes property_load_key = 4;
+}

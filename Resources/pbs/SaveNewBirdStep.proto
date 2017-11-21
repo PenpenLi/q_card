@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message SaveNewBirdStep {
+  enum traits {
+    value = 3531;
+  }
+  required int32 step = 1;
+}

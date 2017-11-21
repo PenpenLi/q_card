@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message PVPQueryTargetC2S{
+  enum traits{
+    value = 5022;
+  }
+}

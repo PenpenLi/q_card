@@ -1,0 +1,54 @@
+package DianShiTech.Protocal;
+
+message Limit {
+  optional int32 max_item_bag_size = 1;			//物品背包上限
+  optional int32 max_equipment_bag_size = 2;	//装备背包上限
+  optional int32 max_active_card_bag_size = 3;	//上阵卡牌上限
+  optional int32 max_backup_card_bag_size = 4;	//卡牌背包上限
+}
+
+message AddedBuy {
+  optional int32 item_cell = 1;
+}
+message Statics {
+  optional int32 item_total_draw_times = 1;			//锦囊点将次数
+  optional int32 money_ten_draw_times = 2;			//10连抽次数
+  optional int32 loyalty_total_draw_times = 3;		//民心点将次数
+  optional int32 vip_item_total_draw_times = 4;		//VIP点将次数
+  optional int32 vip_loyalty_total_draw_times = 5;	//VIP民心点将次数
+  optional int32 draw_card_four_star_count = 6;		//4星卡点将个数
+  optional int32 draw_card_five_star_count = 7;		//5星卡牌点将个数
+  optional int32 eat_party_count = 8;				//犒赏三军次数
+  //抽卡计数器 用于抽卡必掉概率计算
+  optional int32 draw_card_loyalty_count = 9;		//民心点将计数
+  optional int32 draw_card_money_count = 10;		//锦囊单抽计数
+  optional int32 draw_card_ten_money_count = 11;	//锦囊10连抽计数
+  optional int32 draw_card_great_count = 15;		//神将点将计数
+  //玩家登陆和登出时间计算
+  optional uint32 last_login_time = 12;				//最近一次登入时间
+  optional uint32 last_logout_time = 13;			//最近一次登出时间
+  optional uint32 character_create_time = 14; 		//账号创建时间
+}
+message BaseSync {
+ optional int32 money = 3;			//收费元宝
+  optional int32 coin = 4;			//铜钱
+  optional int32 level = 5;			//等级
+  optional AddedBuy added_buy = 6;	//额外购买的背包格子
+  optional int32 loyalty = 7;		//民心
+  optional Limit limit = 1;			//背包上限数据
+  optional int32 leader_power = 2;	//领导力
+  optional int32 score = 8;			//新账号三选一的掉落包的ID
+  optional int32 token = 9;			//废弃
+  optional int32 vip_level = 10; 	//VIP等级
+  optional int32 vip_exp = 17; 		//vip经验
+  optional int32 avatar = 11;		//头像
+  optional int32 experience = 12;	//经验
+  optional int32 level_reward = 13;	//升级领奖
+  optional int32 point = 14;		//免费元宝
+  optional Statics statics = 15;	//玩家其他数据
+  optional int32 jianghun = 16;		//将魂
+  optional int32 honor = 18;		//荣誉点
+  optional int32 rank_point = 19;	//排行点
+  optional int32 guild_point = 20;	//公会点
+  optional int32 bable_point = 21;  //通天塔货币
+}

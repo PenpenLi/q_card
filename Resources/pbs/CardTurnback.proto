@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message CardTurnback {
+  enum traits { value = 3285;}
+  required int32 config_id = 1;
+  required int32 card_id = 2;
+  repeated int32 consume_id = 3;
+}

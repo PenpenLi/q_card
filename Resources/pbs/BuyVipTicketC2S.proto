@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message BuyVipTicketC2S {
+  enum traits{value = 5103;}
+}

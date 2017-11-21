@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import"Commodity.proto";
+message CommodityListS2C{
+  enum traits{value = 5097;}
+  repeated Commodity list = 1;
+  optional CommodityData data = 2;
+}

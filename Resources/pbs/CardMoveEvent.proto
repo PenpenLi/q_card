@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+
+message CardMoveEvent {
+  enum traits { value = 8100;}
+  required int32 card_index = 1;
+  required int32 from = 2;
+  required int32 to = 3;
+  optional int32 move_effect = 4;
+}

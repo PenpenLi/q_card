@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+
+message BableFightReqCheckC2S{
+  enum traits{
+    value = 10084;
+  }
+
+  required FightMap map = 1;
+}

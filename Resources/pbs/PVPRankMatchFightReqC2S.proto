@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+message PVPRankMatchFightReqC2S{
+	enum traits{value = 5165;}
+	required int32 target = 1;		//选择的目标
+	required FightCards cards = 2; 	//布阵信息	
+}

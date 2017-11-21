@@ -1,0 +1,25 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message QuickExchangeCardResult {
+  enum traits { value = 2562;}
+  enum State {
+    Ok = 0;
+    HasSameConfigId = 1;				//替换卡牌和被替换卡牌是同名卡牌
+    BackupCardIsNotValid = 2;			//替换的卡牌是无效的卡牌
+    ActiveCardIsNotValid = 3;			//被替换的卡牌或者要下阵的卡牌是无效的卡牌
+    NotEnoughLeaderPower = 4;			//没有足够的领导力不能上阵该替换卡牌
+    WorkInMine = 5;						//替换的卡牌在矿场打工中
+    MasterShouldNotDoDown = 6;			//卡牌是主帅不能下阵
+    MustHasCardInBattle = 7;			//上阵卡牌只有一张，不能下阵该开拍
+	FailedForTeamIsFull = 8;			//阵型卡牌上限，不能再上阵卡牌
+	ErrorOpType = 9;					//错误的操作类型
+  }
+  enum Optype{
+   GoIntoBattle = 1;
+   GoDownBattle = 2;
+   Exchange = 3;
+  }
+  required State state = 1;
+  required Optype op_type = 2;
+  optional ClientSync client_sync = 3;
+}

@@ -1,0 +1,12 @@
+package DianShiTech.Protocal;
+message AwardCodeResultS2C{
+  enum traits{value = 5094;}
+  enum ErrorCode{
+    NO_ERROR_CODE = 1;
+    NOT_FOUND_CODE = 2;
+    CODE_IS_USEED = 3;
+    YOU_USED_CODE = 5;
+    SYSTEM_ERROR = 4;
+  }
+  required ErrorCode error = 1;
+}

@@ -1,0 +1,10 @@
+class SdkPluginManager{
+    static SdkPluginManager* getInstance();
+    static void clear();
+    void login();
+    void release();
+    void logout();
+    static void registerScriptHandler(LUA_FUNCTION nHandler);
+    static void switchAccount();
+    void setSubChannel(const std::string &channel);
+};

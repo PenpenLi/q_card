@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message AskForCanEatPatty {
+  enum traits { value = 3432;}
+}

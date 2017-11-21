@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+import "CommanderCardGroup.proto";
+import "Equipment.proto"; 
+message FriendHelpInfo{
+	optional CommanderCard friend_card_info = 1;			//好友卡牌信息
+	optional int32 friendId = 3;
+	repeated Equipment equip = 2;
+};
+message BableInfo{
+    optional int32 helper_card_id = 1;						//帮助好友的卡牌id
+	optional int32 bable_id = 2;							//当前通关塔层
+	optional int32 help_friend_count = 3;					//帮助好友的次数	
+}

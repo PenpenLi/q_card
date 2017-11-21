@@ -1,0 +1,8 @@
+package DianShiTech.Protocal;
+message AskForLivenessPointGift {
+  enum traits {
+    value = 10036;
+  }
+  
+  required int32 award_id = 1;
+}

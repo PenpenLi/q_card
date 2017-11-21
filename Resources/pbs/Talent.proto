@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+message TalentLevelUp{
+  required int32 talent_id = 1;        //天赋ID
+  required int32 talent_up_time = 2;   //升级时间点
+}
+message PlayerTalent{
+  optional int32 talent_bank = 1;           //天赋银行ID
+  optional int32 talent_point = 2;          //当前天赋点数
+  optional int32 talent_product = 3;        //当前天赋产出
+  optional int32 talent_product_time = 4;   //天赋产出结算时间
+  optional int32 bank_level_up_time = 5;    //天赋银行升级时间
+  repeated TalentLevelUp talent_up = 6;     //天赋升级信息
+  repeated int32 talent_list = 7;           //天赋技能列表
+}

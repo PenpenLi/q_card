@@ -1,0 +1,21 @@
+package DianShiTech.Protocal;
+message BattleCard{
+	required int32 card = 1;	//卡牌ID
+	required int32 pos = 2;		//卡牌位置
+	required int32 leader = 3;	//是否主帅
+}
+message BattleFormation{
+	enum BattleIndex{
+		BATTLE_INDEX_NORMAL_1 = 1;	//普通阵容
+		BATTLE_INDEX_NORMAL_2 = 2;	//普通阵容
+		BATTLE_INDEX_NORMAL_3 = 3;	//普通阵容
+		BATTLE_INDEX_PVP = 4;		//征战防守阵容
+		BATTLE_INDEX_RANK_MATCH = 5;//排位赛防守阵容
+	}
+	repeated BattleCard cards = 1; 	//卡牌信息
+	required BattleIndex id = 2;	//阵容Id
+}
+//卡牌阵容信息
+message BattleSaveCards{
+	repeated BattleFormation battle = 1; 	//阵容详细信息
+}

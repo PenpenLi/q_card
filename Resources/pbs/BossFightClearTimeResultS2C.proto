@@ -1,0 +1,18 @@
+package DianShiTech.Protocal;
+import "BossFightBase.proto";
+import "ClientSync.proto";
+message BossFightClearTimeResultS2C{
+  enum traits {value = 5053;}
+
+  enum ErrorCode{
+   NO_ERROR_CODE = 1;
+   NOT_NEED_CLEAR = 2;
+   NOT_ENABLE = 3;
+   SYSTEM_ERROR = 4;
+   NEED_MORE_MONEY = 5;
+  }
+  required ErrorCode error = 1;
+  required int32 boss = 4;
+  optional BossPlayerData data = 2;
+  optional ClientSync client = 3;
+}

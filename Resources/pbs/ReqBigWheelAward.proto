@@ -1,0 +1,6 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqBigWheelAward{
+	enum traits {value = 10076;}
+	required int32 var = 1;
+}

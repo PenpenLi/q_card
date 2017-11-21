@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+		<key>newVesion</key>
+	<string>发现新版本，是否需要更新？</string>
+		<key>newMajorVesion</key>
+	<string>发现最新安装包，请退出游戏重新下载安装！</string>
+		<key>update_url</key>
+	<string>http://update2.qcard3.com:8080/version</string>
+		<key>resource_url</key>
+	<string>http://update2.qcard3.com:8080/serverlist.csv</string>
+		<key>official_website_url</key>
+	<string>http://www.qcard3.com</string>
+		<key>google_player_url</key>
+	<string><![CDATA[https://play.google.com/store/apps/details?id=com.qcard3.app]]></string>
+		<key>app_store_url</key>
+	<string><![CDATA[https://itunes.apple.com/us/app/q-ka-san-guo/id900349709?ls=1&mt=8]]></string>
+		<key>default_res_ver</key>
+	<string>1.3.0.1</string>
+		<key>no_new_version</key>
+	<string>正在进入游戏，请稍候...</string>
+		<key>network_error</key>
+	<string>网络连接失败，是否再次尝试连接？</string>
+		<key>update_ok</key>
+	<string>资源更新成功。</string>
+		<key>download_update_fileList_from_server_failed</key>
+	<string>资源列表下载失败,请检查网络环境</string>
+		<key>exit_game</key>
+	<string>是否退出游戏？</string>
+</dict>
+</plist>

@@ -1,0 +1,13 @@
+package DianShiTech.Protocal;
+message QuickExchangeCard {
+  enum traits { value = 2561;}
+  enum Optype{
+   GoIntoBattle = 1;
+   GoDownBattle = 2;
+   Exchange = 3;
+  }
+  
+  required int32 pos_or_cardid = 1;
+  required int32 backup_card_id = 2;
+  required Optype op_type = 3;
+}

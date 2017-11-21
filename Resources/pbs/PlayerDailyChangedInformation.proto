@@ -1,0 +1,116 @@
+package DianShiTech.Protocal;
+import "BableInfo.proto";
+message PlayerDailyChangedInformation {
+  enum traits { value = 2238;}
+  message Spirit {
+    optional int32 current = 1;				//体力当前值
+    optional int32 last_refresh_time = 2;	//上次刷新时间
+    optional int32 next_refresh_time = 3;	//下次刷新时间
+  }
+  message Command {
+    optional int32 current = 1;				//体力当前值
+    optional int32 last_refresh_time = 2;   //上次刷新时间
+    optional int32 next_refresh_time = 3;   //下次刷新时间
+  }
+
+  message FreeRefresh {
+    optional int32 market_refresh_times = 1; 				//废弃
+    optional int32 daily_task_refresh_times = 2;			//日常任务刷新时间
+    optional int32 last_refresh_time = 3;					//上次刷新时间
+    optional int32 next_refresh_time = 4;					//下次刷新时间
+    optional int32 current_receive_daily_task_count = 5;	//当前领取日常任务数量
+    optional int32 forcible_done_daily_task_count = 6;		//当前元宝完成日常数量
+    optional int32 forcible_buy_stage_count = 7;			//废弃
+    optional int32 daily_buy_vitality_item_count = 8; 		//废弃
+    optional int32 use_money_tree_count = 9;				//摇钱树使用数量
+    optional int32 quick_stage_count = 10; 					//废弃
+    optional int32 buy_lingpai_count = 11; 					//废弃
+	optional int32 forcible_buy_activity_stage_count = 12;	//废弃
+	optional int32 moneytree_last_use_hit_rating = 13;		//摇钱树暴击概率	
+	optional int32 festival = 14;  							//0:can get gift. 1: has get gift 是否节日礼包
+	optional int32 wechat_share_is_done = 15;				//是否已微信分享过
+	optional int32 is_give_like = 16;						//是否已经给过赞
+	optional int32 bable_reset_times = 17;					//通天塔重置次数
+	optional bool bable_daily_award_get = 18;				//通天塔每日奖励是否已领取
+	optional bool bable_daily_fight = 19;					//今天是否打过通天塔
+  };
+  message FreeTaskRefersh {
+    optional int32 current = 1;								//花费元宝刷新日常次数
+    optional int32 next_refresh_time = 2;					//下一次日常时间
+  };
+  message IncreaseBuyItem {
+    optional int32 cell_id = 1; 					//商店商品Id
+    optional int32 count = 2;   					//购买的次数
+  };
+  message StoreItemGroup{
+	optional int32 last_refresh_time 		= 1;  	//上一次刷新时间
+    optional int32 next_refresh_time 		= 2;  	//下一次刷新时间
+	optional int32 store_open_time			= 8;	//开启时间 0
+	optional int32 store_close_time 		= 3;	//商店关闭时间 		0(不关闭)
+    repeated IncreaseBuyItem item 			= 4;	//商店购买次数信息
+	optional int32 store_free_refresh_count = 5;	//免费手动刷新次数
+	optional int32 store_pay_refresh_count	= 6;	//花元宝刷新商店次数
+	optional int32 store_type 				= 7;	//商店类型(StoreInformation.StoreType)
+  };
+  message IncreaseBuyGroup {
+	repeated StoreItemGroup store_records = 1;		//VIP商店的刷新和购买信息
+	optional int32 item_sync_id = 2;				//该玩家的商店的sync_id
+  };
+  message OnlineRewardState {
+    optional int32 received_times = 1; 				//领取礼包的次数
+    optional int32 start_caculate_time = 3;			//开始结算时间
+    optional int32 current_reward_start_time = 4; 	//上次领取礼包的时间
+    optional int32 online_time = 2;					//在线时间
+  };
+  message Liveness{
+    optional int32 type = 1;						//活跃度类型
+	optional int32 var = 2;							//活跃度数值
+  };
+  message LivenessAward{
+    optional int32 award_id = 1;					//活跃度奖励Id
+	optional int32 is_get = 2;						//活跃度是否领取
+  };
+  message VipDailyInfo{
+	optional int32 free_quick_stage = 1 ; 			//免费挂机次
+  };
+  message LivenessInfo{
+	optional int32 point = 1;						//活跃度点数	
+	repeated Liveness liveness =2;					//活跃度具体
+	repeated LivenessAward awrd_info = 3;			//活跃度奖励
+	optional int32 last_refresh_time = 4;			//活跃度上次刷新时间
+    optional int32 next_refresh_time = 5;			//活跃度下次刷新时间
+	optional int32 week_point = 6;					//本周活跃度点数
+	optional int32 last_week_point = 7;				//上一次周活跃度点数
+	optional int32 week_point_is_get = 8;			//上次周活跃度奖励领取标示
+  };
+  message ExchangeRecord{
+	optional int32 id = 1;							//兑换物的ID
+	optional int32 count = 2;						//兑换物次数
+  };
+  message ExchangeInfo{
+	repeated ExchangeRecord record = 1;				//兑换活动的记录
+  };
+  message BableCardInfo{
+	optional int32 card_id = 1;						//卡牌configid
+	optional int32 card_hp_per = 2;					//卡牌血量				
+  };
+  message BableInfo{
+	optional int32 self_wall_hp_per = 1;			//自己城墙血量万分比
+	optional int32 target_wall_hp_per = 2;			//目标城墙血量万分比
+	repeated int32 friend_help_info = 3;			//援助过自己的好友id集合
+	repeated BableCardInfo target_card_info = 4;	//最后一关的怪物血量信息
+  };
+  
+  optional Spirit spirit = 1;							//体力
+  optional Command command = 2;							//令牌
+  optional FreeRefresh refresh = 3;						//刷新
+  optional IncreaseBuyGroup increase_buy = 4;			//商店情况	
+  optional OnlineRewardState online_reward_state = 5;	//在线奖励
+  optional FreeTaskRefersh task_refresh = 6;			//日常任务
+  optional LivenessInfo liveness = 7;					//活跃度
+  optional ExchangeInfo exchange = 8;					//兑换信息
+  optional VipDailyInfo vip_daily = 9;					//VIP相关日常信息 
+  optional BableInfo bable_info = 10;					//通天塔怪物血量信息
+  optional FriendHelpInfo friend_card_info = 11;	    //好友卡牌信息
+  
+}

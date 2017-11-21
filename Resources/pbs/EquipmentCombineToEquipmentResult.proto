@@ -1,0 +1,17 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message EquipmentCombineToEquipmentResult {
+  enum traits { value = 4502;}
+  enum State {
+    Ok = 0;
+    NoSuchConfigId = 1;
+    NeedMoreItem = 2;
+    NotEnoughCurrency = 3;
+    IsAssembledEquipment = 4;
+    NeedMoreEquipment = 5;
+    NoSuchEquipment = 6;
+    EquipmentConfigIdIsNotValid = 7;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 4;
+}

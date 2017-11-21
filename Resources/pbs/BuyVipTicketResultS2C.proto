@@ -1,0 +1,15 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message BuyVipTicketResultS2C {
+  enum traits{value = 5104;}
+  enum ErrorCode{
+    NO_ERROR_CODE = 0;
+    NEED_MORE_MONEY = 1;
+    HAS_BUY_TICKET = 2;
+	NOT_MONTH_VIP = 4;
+    SYSTEM_ERROR = 3;
+  }
+
+  required ErrorCode  error  = 1;
+  optional ClientSync client = 2;
+}

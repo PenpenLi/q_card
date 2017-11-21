@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+message TalentGetPointResultS2C{
+	enum traits{value = 5123;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;   //领取成功
+		NO_PRODUCE_POINT = 2;//没有可以领取点数
+		SYSTEM_ERROR = 3;	
+	}
+	required ErrorCode error = 1;
+	optional int32 point = 2;
+	optional bool  double_point = 4;
+	optional ClientSync client = 3;
+}

@@ -1,0 +1,19 @@
+package DianShiTech.Protocal;
+import "PVPDataSyncCommon.proto";
+message PVPAwardResultCS2BS{
+  enum traits{
+   value = 5031 ;
+  }
+  enum ErrorCode{
+    NO_ERROR = 1;
+    NO_AWARD = 2;
+    NOT_ALLOW_AWARD = 3;
+    IS_GONE_AWARD = 4;
+    SYSTEM_ERROR = 5;
+  }
+  required ErrorCode  error = 1;
+  required int32      keepAward = 2;
+  required int32      rank = 3;
+  optional PVPDataSyncCommon common = 4;
+
+}

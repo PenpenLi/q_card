@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message TalentLevelUpC2S{
+	enum traits{value = 5110;}
+	required int32 talent = 1;  //请求升级天赋ID
+	optional bool cost = 2;     //是否花费元宝升级
+}

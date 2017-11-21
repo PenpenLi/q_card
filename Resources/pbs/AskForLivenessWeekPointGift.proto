@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message AskForLivenessWeekPointGift {
+  enum traits {
+    value = 10038;
+  }
+}

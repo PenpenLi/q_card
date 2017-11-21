@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+
+message FightReqCheckCS2BS{
+  enum traits{
+    value = 5017;
+  }
+
+  required FightMap map = 1;
+}

@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+import"GuildSync.proto";
+message GuildChangeBaseResultS2C{
+	enum traits{value = 5198;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		AUTHORITY_LIMIT = 2;	//权限不够
+		NOT_HAS_GUILD = 3;		//没有公会
+		APPLY_LEVEL_LIMIT = 4;		
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+	optional GuildSync sync = 2;
+}

@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+
+message ForceOffline {
+  enum traits { value = 3008;}
+  enum eresult{
+   NO_REASON = 1;
+   ACCOUNT_LOCK = 2;
+  }
+  optional int32 result = 1;
+}

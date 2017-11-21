@@ -1,0 +1,17 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqExchangeActivityCardResult{
+ enum traits { value = 10103;}
+ enum State{
+	Success = 1;
+	NotHaveEnoughMoney = 2;
+	CardGroupNotSame = 3;		//卡组不同
+	ConfigError = 4;
+	ActivityNotOpen = 5;
+	CardNotOpen = 6;			//该卡未开启
+	CardGroupError = 7;			//卡组不在范围内 
+	CanNotExchangeSameCard = 9; //不允许兑换同样卡牌(root id不能相同)
+ }
+ required State state = 1;
+ optional ClientSync client_sync = 2;
+}

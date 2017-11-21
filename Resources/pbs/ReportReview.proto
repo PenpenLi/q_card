@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "NormalBattleResult.proto";
+message ReportReview{
+  optional NormalBattleResult result = 1;
+  optional string player_group_red = 2;
+  optional string player_group_blue = 3;
+}

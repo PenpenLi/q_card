@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message LoyaltyFreeDrawCard {
+  enum traits { value = 10002;}
+}

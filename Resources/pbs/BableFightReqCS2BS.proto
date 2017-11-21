@@ -1,0 +1,10 @@
+package DianShiTech.Protocal;
+import "PlayerFightBaseData.proto";
+
+message BableFightReqCS2BS{
+  enum traits {
+    value = 10083;
+  }
+  
+  required FightCards cards = 1;
+}

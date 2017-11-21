@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message MailGetAdjunctC2S{
+  enum traits{ value = 5059; }
+  required int32 mail  = 1;
+}

@@ -1,0 +1,23 @@
+package DianShiTech.Protocal;
+import "ClientSync.proto";
+import "PlayerFriends.proto";
+
+message MailGetAdjunctResultS2C{
+  enum traits {value = 5080 ; }
+  enum ErrorCode{
+    NO_ERROR_CODE = 1;
+    NOT_FOUND_MAIL = 2;
+    NOT_FOUND_ADJUNCT = 3;
+    ITEM_BAG_FULL = 4;
+    CARD_BAG_FULL = 5;
+    EQUIP_BAG_FULL = 6;
+  }
+  message AdjunctResult{
+    optional uint32       mail    = 1; // mail id
+    repeated AdjunctData  data    = 2; // need remove adjunct
+  }
+  required ErrorCode      error  = 1;   
+  optional AdjunctResult    mail   = 2;
+  optional ClientSync     client = 3; // update ..
+
+}

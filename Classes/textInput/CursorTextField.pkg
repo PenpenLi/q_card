@@ -1,0 +1,13 @@
+
+
+class CursorTextField: public CCTextFieldTTF
+{
+	static CursorTextField* textFieldWithPlaceHolder(const char *placeholder, const char *fontName, float fontSize);
+	void setDesignedSize(CCSize size);
+	CCSize getDesignedSize(); 
+	void setCursorColor(const ccColor3B& color3);
+	void setEnabled(bool isEnable);
+	bool getEnabled();
+	void openIME();
+	void closeIME();
+};

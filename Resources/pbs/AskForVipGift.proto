@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message AskForVipGift {
+  enum traits {
+    value = 3641;
+  }
+}

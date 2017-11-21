@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+import "PVPArenaBase.proto";
+message PVPArenaTargetChangeCardS2C{
+	enum traits{value = 5133;}			
+	optional PVPArenaTarget target = 1;  //对手数据
+}

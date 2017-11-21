@@ -1,0 +1,12 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqForcibleDoneDailyTaskResult{
+ enum traits { value = 9903;}
+ enum eresult{
+  success = 1;
+  money_limit = 2;
+ }
+ required int32 task_id = 1;
+ required eresult result = 2;
+ optional ClientSync client_sync = 3;
+}

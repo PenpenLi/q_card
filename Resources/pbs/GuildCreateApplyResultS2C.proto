@@ -1,0 +1,14 @@
+package DianShiTech.Protocal;
+message GuildCreateApplyResultS2C{
+	enum traits{value = 5179;}
+	enum ErrorCode{
+		NO_ERROR_CODE = 1;
+		LEVEL_LIMIT = 2;		//等级不够
+		NOT_FOUND_GUILD = 3;	//没有找到公会
+		HAS_GUILD = 4;			//已经有公会
+		CONDITION_NOT_MATCH = 5;//条件不匹配
+		HAS_APPLYED = 6;			//在申请列表
+		SYSTEM_ERROR = 99;
+	};
+	required ErrorCode error = 1;
+}

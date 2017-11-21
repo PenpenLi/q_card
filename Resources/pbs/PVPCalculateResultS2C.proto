@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+import "PVPDataSyncCommon.proto";
+message PVPCalculateResultS2C{
+  enum traits { value = 5033 ;}
+
+  required PVPDataSyncCommon common = 1;
+  required int32 id = 2;
+
+}

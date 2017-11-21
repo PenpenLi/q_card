@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+
+message GoDownFromBattle {
+  enum traits { value = 1075;}
+  required int32 active_card_id = 1;
+}

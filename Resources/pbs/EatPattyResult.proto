@@ -1,0 +1,11 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message EatPattyResult {
+  enum traits { value = 3212;}
+  enum State {
+    Ok = 0;
+    NoRight = 1;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,6 @@
+package DianShiTech.Protocal;
+message ItemCombineToEquipment {
+  enum traits { value = 4301;}
+  required int32 config_id = 1;
+  optional int32 count = 2;
+}

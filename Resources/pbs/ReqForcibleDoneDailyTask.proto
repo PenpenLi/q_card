@@ -1,0 +1,5 @@
+package DianShiTech.Protocal;
+message ReqForcibleDoneDailyTask{
+ enum traits { value = 9902;}
+ required int32 task_id = 1;
+}

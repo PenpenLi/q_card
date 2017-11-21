@@ -1,0 +1,16 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+
+message GoIntoBattleResult {
+  enum traits { value = 1070;}
+  enum State {
+    Ok = 0;
+    FailedForTeamIsFull = 1;
+    NotValidBackupCard= 2;
+    NotEnoughLeaderPower = 3;
+    HasSameConfigId = 4;
+    WorkInMine = 5;
+  }
+  required State state = 1;
+  optional ClientSync client_sync = 2;
+}

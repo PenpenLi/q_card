@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "BossFightBase.proto";
+message BossDamageNoticeS2C{
+  enum traits{ value = 5058 ; }
+  required BossDamageData damage = 1;
+
+}

@@ -1,0 +1,9 @@
+package DianShiTech.Protocal;
+import "PVPRankMatchBase.proto";
+import "PVPRankMatchSearchResultS2C.proto";
+message PVPRankMatchFightResultS2C{
+	enum traits{value = 5166;}
+	required RankMatchBase self = 1;
+	required RankMatchReport report = 2; 
+	optional PVPRankMatchSearchResultS2C target = 3; //对手
+}

@@ -1,0 +1,13 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message AskForMonthRewardResult {
+  enum traits { value = 3325;}
+  enum State {
+    Ok = 0;
+    NoRight = 1;
+    NeedLoginedMore = 2;
+  }
+  required State state = 1;
+  optional int32 month_reward = 3;
+  optional ClientSync client_sync = 2;
+}

@@ -1,0 +1,96 @@
+import "Item.proto";
+import "Equipment.proto";
+import "Currency.proto";
+import "CommanderCardGroup.proto";
+import "SyncCommon.proto";
+import "InstanceData.proto";
+import "CardPictureState.proto";
+import "PlayerDailyChangedInformation.proto";
+import "VipState.proto";
+import "DrawCardRebate.proto";
+import "Talent.proto";
+import "PlayerAwardRecord.proto";
+import "BattleFormation.proto";
+import "BableInfo.proto";
+import "FightBuff.proto";
+package DianShiTech.Protocal;
+message ClientSync {
+  enum traits { value = 1778;}
+  optional BaseSync common = 1;
+  enum BagAction {
+    Add = 0;
+    Remove = 1;
+    Update = 2;
+  }
+
+  message ItemSync {
+    required BagAction action = 1;
+    required Item  object = 2;
+  }
+  repeated ItemSync item = 2;
+
+  message EquipmentSync {
+    required BagAction action = 1;
+    required Equipment object = 2;
+  }
+  repeated EquipmentSync equipment = 3;
+
+  message CardSync {
+    required BagAction action = 1;
+    required CommanderCard object = 2;
+  }
+  repeated CardSync card = 4;
+
+  message InstanceSync{
+    required BagAction    action = 1;
+    required InstanceData object = 2;
+  }
+  repeated InstanceSync instance = 5;
+
+  message CollectionSync {
+    required BagAction action = 1;
+    required CardPictureState object = 2;
+  }
+
+  //message AchivementSync {
+  //  required int32 config_id = 1; //新完成成就
+	//required int32 is_get = 2;	  //是否领取
+ // }
+
+  message DrawCardRebateSync{
+    required DrawCardRebate object = 2;
+    required BagAction    action = 1; 
+  }
+  message TalentSync{
+	required bool needSync = 1;
+	optional PlayerTalent talent = 2;
+  }
+  message PlayerAwardRecordSync{
+	optional bool needSync = 1;
+	optional PlayerAwardRecord award_record = 2; //奖励领取记录
+  }
+  message BattleSaveCardsSync{
+	optional bool needSync = 1;
+	optional BattleSaveCards battle = 2; //奖励领取记录
+  }
+  message BableInfoSync{
+	optional bool needSync = 1;
+	optional BableInfo bable_info = 2;
+  }
+  message AppendFightBufferSync{
+	optional bool needSync = 1;
+	optional AppendFightBuffer append_buffer = 2;
+  }
+  
+  repeated DrawCardRebateSync rebate = 10;
+  
+  repeated CollectionSync collection = 7;
+  optional PlayerDailyChangedInformation changed_information = 6;
+  optional VipState vip_state = 8;
+  //repeated AchivementSync added_achivement = 9;
+  optional TalentSync talent = 11;
+  optional PlayerAwardRecordSync award_record = 12; //奖励领取记录
+  optional BattleSaveCardsSync battle = 13; 	    //卡牌阵容信息
+  optional BableInfoSync bable_info = 14;
+  optional AppendFightBufferSync append_buffer = 15;	//附加战斗buff
+}

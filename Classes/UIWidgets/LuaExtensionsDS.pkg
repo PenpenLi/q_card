@@ -1,0 +1,62 @@
+
+//导出C++接口 给Lua调用
+
+
+class RichLabel : public CCLayerRGBA 
+{
+	static RichLabel * create(const char* str, const char* fontName, const int fontSize, CCSize labelSize, bool appendString = false, bool enableShadow = true);
+	void setColor(const ccColor3B& color3);
+	char * getString();
+	CCSize getTextSize();
+};
+
+class DSMask : public CCLayerColor
+{
+public:
+	
+	static DSMask* createMask(CCSize contentSize,CCSprite *bg);
+	static DSMask* createMask(CCSize contentSize);
+
+};
+
+enum emPromptDirection
+{
+	emUpArrow =0,	//上
+	emDownArrow,	//下
+	emLeftArrow,	//左
+	emRightArrow,	//右
+};
+
+enum emStandDir
+{
+	emLeft = 0, 
+	emRight, 
+};
+class GuideLayer : public CCLayer
+{
+	static GuideLayer* createGuideLayer();
+	void setMaskRect(CCRect rect);
+	void setMaskPicturePath(int systemId, int stepId,const char*guideInfo,const char *guideTips, CCPoint poxPoint,emStandDir dirStand, emPromptDirection dir );
+	void skip();
+};
+
+class GraySprite : public CCSprite
+{
+	static GraySprite* create(const char* pszFileName);
+	static GraySprite* createWithSpriteFrameName(const char *pszSpriteFrameName);
+	static GraySprite* createWithTexture(CCTexture2D *pTexture);
+};
+
+class DrawCricleMask : public CCNode
+{
+	static DrawCricleMask* create(float fRadius,CCNode *node);
+};
+
+
+
+
+
+
+
+
+

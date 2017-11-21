@@ -1,0 +1,11 @@
+import "BattleCommon.proto";
+package DianShiTech.Protocal;
+
+message CardSkillDamageEvent {
+  enum traits { value = 8105;}
+  required int32 target = 1;
+  required int32 damage_type = 2;
+  required int32 final_hp = 3; 
+  required int32 damage = 4;
+  required int32 target_type = 5;
+ }

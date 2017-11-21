@@ -1,0 +1,27 @@
+package DianShiTech.Protocal;
+import "NormalBattleResult.proto";
+import "PlayerFightBaseData.proto";
+import "ClientSync.proto";
+// 副本战斗结果结算
+
+message FightResult{
+  enum traits{
+    value = 5019 ;
+  }
+
+  enum BattleResultEnum{
+    WIN_LEVEL_1 = 2;
+    WIN_LEVEL_2 = 3;
+    WIN_LEVEL_3 = 4;
+    LOSE_LEVEL_1 = 5;
+    LOSE_LEVEL_2 = 6;
+    LOSE_LEVEL_3 = 7;
+  }
+
+  optional NormalBattleResult result = 1;
+  optional FightMap           map = 2;
+  optional ClientSync         client_sync = 3;
+  optional BattleResultEnum   result_lv = 4;
+  //optional int32              boss = 5;
+  optional int32 			  bable_death_card_id = 6;		//通天塔城墙被攻破，有几率死亡一张卡牌的id
+}

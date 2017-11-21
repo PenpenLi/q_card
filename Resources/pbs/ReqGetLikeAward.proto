@@ -1,0 +1,4 @@
+package DianShiTech.Protocal;
+message ReqGetLikeAward{
+enum traits{ value = 10071;}
+}

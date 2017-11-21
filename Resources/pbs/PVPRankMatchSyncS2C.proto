@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+import "PVPRankMatchBase.proto";
+message PVPRankMatchSyncS2C{
+	enum traits{ value = 5174;}
+	required RankMatchBase self = 1;
+	repeated RankMatchReport report = 2; 
+}

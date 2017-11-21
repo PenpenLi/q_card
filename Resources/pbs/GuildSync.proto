@@ -1,0 +1,38 @@
+package DianShiTech.Protocal;
+import "GuildBase.proto";
+import "PlayerFriends.proto";
+message GuildSync{
+	enum Sync{
+		_ADD_ = 1;
+		_REMOVE_ = 2;
+		_UPDATE_ = 3;
+	}
+	message GuildMemberSync{
+		required Sync sync = 1;
+		required GuildMember player = 2;
+		optional RelationData data = 3;
+	};
+	message GuildApplySync{
+		required Sync sync = 1;
+		optional RelationData data = 2;
+	};
+	message GuildBaseSync{
+		required bool sync = 1;
+		optional GuildBase base = 2;
+	};
+	message GuildInstanceSync{
+		required bool sync = 1;
+		optional GuildInstanceBase instance = 2;
+	};
+	
+	message GuildBuildSync{
+		required bool sync = 1;
+		optional GuildBuildBase build = 2;
+	};
+	optional GuildBaseSync base = 1;			//基础信息变化
+	optional GuildInstanceSync instance = 3;	//副本信息变化
+	optional GuildBuildSync build = 4;			//建筑信息变化
+	repeated GuildMemberSync member = 2; 		//成员信息变化
+	repeated GuildApplySync apply = 5;			//申请信息变化
+	repeated GuildInstanceRecord record = 6;	//副本战斗记录
+}

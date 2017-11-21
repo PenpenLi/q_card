@@ -1,0 +1,17 @@
+package DianShiTech.Protocal;
+message PlayerAchievementState {
+  enum traits { value = 4431;}
+  message achievement_stage{
+	required int32 config_id = 1;
+	required int32 is_get = 2;
+  }
+  message achievement_progress{
+    optional int32 config_id = 1;
+	optional int32 progress = 2;
+  }
+  repeated achievement_stage finished_achievement = 1; 		//完成的成就
+  //repeated achievement_stage finished_vip_achievement = 2; 	//废弃
+  optional int32 achievement_point = 3;
+  optional int32 last_receive_achievement_gift_time = 4;
+  repeated achievement_progress progress = 5;
+}

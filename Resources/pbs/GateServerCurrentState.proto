@@ -1,0 +1,7 @@
+package DianShiTech.Protocal;
+message GateServerCurrentState{
+  enum traits {
+    value = 12;
+  }
+  required int32 player_number = 1;
+}

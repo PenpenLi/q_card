@@ -1,0 +1,15 @@
+import "ClientSync.proto";
+package DianShiTech.Protocal;
+message ReqJianghunResult{
+  enum traits { value = 10056;}
+  enum Result{
+	NoSuchCardInBackupGroup = 1; //找不到该卡牌
+	NoSuchItemInItemBag = 2;     //找不到该物品
+	WorkInMine = 3;				 //卡牌在打工
+	NotEnoughCurrency = 4;		 //没有足够的货币
+	ErrorConfigId = 5;			 //不能从降魂表里找到该物品或者卡牌
+	Success = 6;
+  }
+  required Result result = 1;
+  optional ClientSync client_sync = 2;
+}
